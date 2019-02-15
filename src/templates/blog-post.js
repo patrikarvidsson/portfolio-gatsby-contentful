@@ -5,7 +5,6 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
-import heroStyles from '../components/hero.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -14,27 +13,29 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} >
-        <div style={{ background: '#fff' }}>
+        <article>
           <Helmet title={`${post.title} | ${siteTitle}`} />
-          <div className={heroStyles.hero}>
-            <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
-          </div>
-          <div className="wrapper">
-            <h1 className="section-headline">{post.title}</h1>
-            <p
-              style={{
-                display: 'block',
-              }}
-            >
+          <header className="w-2/3 mx-auto text-center mb-12">
+            <div className="font-sans uppercase font-semibold text-sm tracking-wide mb-6">
+              <span>Category · </span>
+              {post.concept === true && <span className="text-red">Concept</span>}
+            </div>
+            <h1 className="text-4xl md:text-5xl">{post.title}</h1>
+            <p className="text-grey-dark font-sans">
               {post.publishDate}
             </p>
+          </header>
+          <div className="mb-12">
+            <Img className="rounded" alt={post.title} fluid={post.heroImage.fluid} />
+          </div>
+          <div className="w-2/3 mx-auto">
             <div
               dangerouslySetInnerHTML={{
                 __html: post.body.childMarkdownRemark.html,
               }}
             />
           </div>
-        </div>
+        </article>
       </Layout>
     )
   }
@@ -52,8 +53,9 @@ export const pageQuery = graphql`
     contentfulBlogPost(slug: { eq: $slug }) {
       title
       publishDate(formatString: "MMMM Do, YYYY")
+      concept
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
+        fluid(maxWidth: 1800, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
         }
       }

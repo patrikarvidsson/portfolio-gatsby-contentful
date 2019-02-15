@@ -18,13 +18,6 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
-          <Helmet>
-            <meta charSet="utf-8" />
-            <title>My Title</title>
-            <link rel="canonical" href="http://mysite.com/example" />
-            <link rel="stylesheet" href="https://use.typekit.net/ojc7pzz.css" />
-            <body className="font-sans leading-normal text-lg antialiased" />
-          </Helmet>
           <div className="w-3/4 py-16 h-screen-50 flex items-center">
             <div>
               <h1 className="font-serif font-semibold leading-tight text-semibold text-black text-4xl lg:text-5xl py-6">{siteSettings.node.tagline}</h1>

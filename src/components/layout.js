@@ -1,4 +1,5 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 import { Link } from 'gatsby'
 import base from '../css/style.css'
 import Container from './container'
@@ -16,7 +17,6 @@ class Template extends React.Component {
 
     return (
       <Container>
-        <Navigation />
         {children}
       </Container>
     )
