@@ -20,6 +20,7 @@
  */
 @tailwind components;
 
+@import "layout.css";
 @import "typography.css";
 
 /**
