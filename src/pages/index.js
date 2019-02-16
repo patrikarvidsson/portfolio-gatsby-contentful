@@ -18,18 +18,18 @@ class RootIndex extends React.Component {
     return (
       <Layout location={this.props.location} >
         <div style={{ background: '#fff' }}>
-          <div className="w-3/4 py-16 h-screen-50 flex items-center">
+          <div className="w-3/4 h-screen-50 flex items-center">
             <div>
-              <h1 className="font-serif font-semibold leading-tight text-semibold text-black text-4xl lg:text-5xl py-6">{siteSettings.node.tagline}</h1>
-              <div className="text-lg md:text-2xl">{siteSettings.node.subline} <a href="mailto:hello@patrikarvidson.com">Send me an e-mail!</a></div>
+              <h1 className="font-serif font-semibold leading-tight text-semibold text-black text-4xl lg:text-5xl">{siteSettings.node.tagline}</h1>
+              <div className="text-lg md:text-xl">{siteSettings.node.subline} <a href="mailto:hello@patrikarvidson.com">Send me an e-mail!</a></div>
             </div>
           </div>
           <div className="mx-2">
-            <h2 className="section-headline">Recent articles</h2>
-            <ul className="article-list">
+            <h2 className="font-sans font-semibold tracking-wide text-black text-sm uppercase">Recent articles</h2>
+            <ul className="list-reset m-0 flex flex-wrap">
               {posts.map(({ node }) => {
                 return (
-                  <li key={node.slug}>
+                  <li className="w-1/2 pr-16" key={node.slug}>
                     <ArticlePreview article={node} />
                   </li>
                 )
@@ -51,7 +51,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 2) {
       edges {
         node {
           title

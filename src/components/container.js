@@ -1,6 +1,7 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Header from './Header/header'
+import Footer from './Footer/footer'
 
 export default ({ children }) => (
   <div>
@@ -15,5 +16,6 @@ export default ({ children }) => (
     <div className="container mx-auto">
       {children}
     </div>
+    <Footer />
   </div>
 )

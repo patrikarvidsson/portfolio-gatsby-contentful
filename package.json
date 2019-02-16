@@ -7,7 +7,6 @@
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
   "dependencies": {
-    "@contentful/gatsby-transformer-contentful-richtext": "^13.0.1",
     "gatsby-image": "^2.0.13",
     "gatsby-plugin-manifest": "^2.0.9",
     "gatsby-plugin-offline": "^2.0.16",
@@ -23,7 +22,6 @@
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
-    "react-inlinesvg": "^0.8.4",
     "react-typography": "^0.16.18",
     "sharp": "^0.21.0",
     "tailwindcss": "^0.7.3",

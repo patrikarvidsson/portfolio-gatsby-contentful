@@ -3,9 +3,8 @@ import SVG from 'react-inlinesvg'
 import logo from "./logo-black.svg"
 import { Link } from "gatsby"
 
-console.log(logo)
 const Header = () => (
-    <header className="py-16 px-24 flex items-center justify-between w-full">
+    <header className="pt-16 px-24 flex items-center justify-between w-full">
       <div>
         <Link className="shadow-none hover:bg-transparent" to="/">
           <img className="h-16 w-16" src={logo} alt="Logo" />

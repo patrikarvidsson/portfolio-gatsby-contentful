@@ -16,8 +16,13 @@ class BlogPostTemplate extends React.Component {
         <article>
           <Helmet title={`${post.title} | ${siteTitle}`} />
           <header className="w-2/3 mx-auto text-center mb-12">
-            <div className="font-sans uppercase font-semibold text-sm tracking-wide mb-6">
-              <span>Category · </span>
+            <div className="font-sans uppercase font-semibold text-sm tracking-loose mb-6">
+                {post.tags.map(tag => (
+                  <span className="mb-0" key={tag}>
+                    {tag}
+                  </span>
+                ))}
+                &nbsp;·&nbsp;
               {post.concept === true && <span className="text-red">Concept</span>}
             </div>
             <h1 className="text-4xl md:text-5xl">{post.title}</h1>
@@ -54,6 +59,7 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       concept
+      tags
       heroImage {
         fluid(maxWidth: 1800, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG

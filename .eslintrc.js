@@ -8,6 +8,7 @@ module.exports = {
   ],
   "globals": {
     "graphql": false,
+    "tw": true,
   },
   "parserOptions": {
     "sourceType": "module",

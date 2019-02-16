@@ -46,6 +46,7 @@ module.exports = {
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
+    'gatsby-plugin-tailwindcss',
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
@@ -59,6 +60,7 @@ module.exports = {
       resolve: 'gatsby-plugin-purgecss',
       options: {
         tailwind: true,
+        printRejected: true,
         purgeOnly: ['src/css/style.css'], // Purge only tailwind
       },
     },
