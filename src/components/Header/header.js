@@ -1,5 +1,4 @@
 import React from "react"
-import SVG from 'react-inlinesvg'
 import logo from "./logo-black.svg"
 import { Link } from "gatsby"
 
