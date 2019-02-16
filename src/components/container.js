@@ -2,6 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Header from './Header/header'
 import Footer from './Footer/footer'
+import containerStyles from "./container.module.css"
 
 export default ({ children }) => (
   <div>

@@ -36,3 +36,15 @@ h5
 h6 {
   @apply font-serif text-black;
 }
+
+.latest-work li:nth-child(odd) {
+  @apply mb-12;
+}
+
+.latest-work li:nth-child(even) {
+  @apply mt-12;
+}
+
+.latest-work li:nth-child(2n+4) {
+  @apply mt-12;
+}
