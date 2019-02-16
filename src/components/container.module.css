@@ -11,20 +11,6 @@ a:hover {
   @apply text-blue bg-blue-lightest;
 }
 
-nav li {
-  @apply font-sans font-semibold inline-block ml-5;
-}
-
-nav li a {
-  @apply no-underline text-black shadow-none px-1 py-px;
-
-  transition: 0.2s;
-}
-
-nav li a:hover {
-  @apply text-blue;
-}
-
 /* Content */
 
 .text-heading,
@@ -37,14 +23,3 @@ h6 {
   @apply font-serif text-black;
 }
 
-.latest-work li:nth-child(odd) {
-  @apply mb-12;
-}
-
-.latest-work li:nth-child(even) {
-  @apply mt-12;
-}
-
-.latest-work li:nth-child(2n+4) {
-  @apply mt-12;
-}

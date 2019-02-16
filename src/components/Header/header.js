@@ -1,6 +1,7 @@
 import React from "react"
 import logo from "./logo-black.svg"
 import { Link } from "gatsby"
+import styles from "./header.module.css"
 
 const Header = () => (
     <header className="pt-16 px-24 flex items-center justify-between w-full">
@@ -11,7 +12,7 @@ const Header = () => (
       </div>
       <nav role="navigation">
         <ul className="list-reset m-0 uppercase tracking-wide text-base">
-          <li className="">
+          <li>
             <Link to="/">Home</Link>
           </li>
           <li>

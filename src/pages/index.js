@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from "gatsby"
+import styles from "./index.module.css"
 
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
@@ -38,7 +39,7 @@ class RootIndex extends React.Component {
               })}
             </ul>
           </section>
-          <section className="latest-work my-24">
+          <section className={styles.latestWork}>
             <h2 className="font-sans font-semibold tracking-wide text-black text-sm uppercase">Recent projects</h2>
             <ul className="list-reset -mx-12 my-0 flex flex-wrap">
               {cases.map(({ node }) => {
