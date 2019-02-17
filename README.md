@@ -1,82 +1,90 @@
-# gatsby-contentful-starter
+# Gatsby Tailwind Emotion Starter
 
-Gatsby [Contentful](https://www.contentful.com) starter for creating a blog
+## Getting Started
 
-![The index page of the starter blog](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/screenshot.jpg "The index page of the starter blog")
-
-Static sites are scalable, secure and have very little required maintenance. They come with a drawback though. Not everybody feels good editing files, building a project and uploading it somewhere. This is where Contentful comes into play.
-
-With Contentful and Gatsby you can connect your favorite static site generator with an API that provides an easy to use interface for people writing content and automate the publishing using services like [Travis CI](https://travis-ci.org/) or [Netlify](https://www.netlify.com/).
-
-## Features
-
-* Simple content model and structure. Easy to adjust to your needs.
-* Contentful integration using our [Sync API](https://www.contentful.com/developers/docs/references/content-delivery-api/#/reference/synchronization/initial-synchronization-of-entries-of-a-specific-content-type)
-* Using our [Delivery API](https://www.contentful.com/developers/docs/references/content-delivery-api/).
-* Responsive/adaptive images via [gatsby-image](https://www.gatsbyjs.org/packages/gatsby-image/)
-
-## Contribution
-
-This project is part of [contentful-userland](https://github.com/contentful-userland) which means that we’re always open to contributions **and you can be part of userland and shape the project yourself after your first merged pull request**. You can learn more about how contentful userland is organized by visiting [our about repository](https://github.com/contentful-userland/about).
-
-## Requirements
-
-To use this project you have to have a Contentful account. If you don't have one yet you can register at [www.contentful.com/sign-up](https://www.contentful.com/sign-up/).
-
-## Getting started
-
-Install [Yarn](https://yarnpkg.com/en/docs/install) (if you haven't already).
-
-### Get the source code and install dependencies.
-
-```
-$ git clone git@github.com:contentful-userland/gatsby-contentful-starter.git
-$ yarn install
+Install Gatsby CLI:
+```sh
+npm install --global gatsby-cli
 ```
 
-Or use the [Gatsby CLI](https://www.npmjs.com/package/gatsby-cli).
+Create new Gatsby project using this starter:
+```sh
+gatsby new my-new-website https://github.com/muhajirframe/gatsby-tailwind-emotion-starter
+```
+
+```sh
+cd my-new-website
+```
+
+## Usage
+
+### Develop
 
 ```
-$ gatsby new contentful-starter https://github.com/contentful-userland/gatsby-contentful-starter
+npm run develop
 ```
 
-### Set up of the needed content model and create a configuration file
+### Build
 
-This project comes with a Contentful setup command `yarn run setup`.
+```
+npm run build
+```
+Your built file will be in `/public`
 
-![Command line dialog of the yarn run setup command](https://rawgit.com/contentful-userland/gatsby-contentful-starter/master/setup.jpg "Command line dialog of the yarn run setup command")
+This project was based on [gatsby-plugin-tailwindcss](https://github.com/muhajirframe/gatsby-plugin-tailwindcss/)
 
-This command will ask you for a space ID, and access tokens for the Contentful Management and Delivery API and then import the needed content model into the space you define and write a config file (`./contentful.json`).
+### How the heck do I use it?
 
-`yarn run setup` automates that for you but if you want to do it yourself rename `.contentful.json.sample` to `.contentful.json` and add your configuration in this file.
+```javascript
+import React from 'react'
+import styled from 'react-emotion'
 
-## Crucial Commands
 
-This project comes with a few handy commands for linting and code fixing. The most important ones are the ones to develop and ship code. You can find the most important commands below.
+const Container = styled.div`
+  ${tw`py-8`};
+`
+const Text = styled.p`
+  ${tw`bg-black text-white`};
+`
 
-### `yarn run dev`
+const Home = () => (
+  <Container>
+    <Text>I am Text component made with Tailwind CSS + EmotionJS</Text>
+  </Container>
+)
 
-Run in the project locally.
+export default Home
+```
 
-### `yarn run build`
+### Why would I use it?
 
-Run a production build into `./public`. The result is ready to be put on any static hosting you prefer.
+Because Tailwind CSS is awesome. If you used [Tachyons](https://tachyons.io/) before. You know how awesome it utility first CSS. Compared to CSS framework like [Bootstrap](http://getbootstrap.com/). -- If you haven't try utility first CSS, give it a try. It's one of the best things in my life --. Tailwind is a more customizable version of Tachyons.
 
-### `yarn run deploy`
+But, because [Tailwind CSS](https://tailwindcss.com) gives you alot of class as utilities. The file size gets bloated. In fact it's 1.5 times bigger than Bootstrap. (https://tailwindcss.com/docs/controlling-file-size )
 
-Run a production build into `./public` and publish the site to GitHub pages.
+CSS-in-JS to save.
 
-### `yarn run cleanup-repository`
+Fortunately, you can use CSS-in-JS like [Emotion](https://github.com/emotion-js/emotion), to only load needed styles. So you can keep you css size small.
 
-Removes all dependencies, scripts and data from the installation script.
+Furthremore, CSS-in-JS is just awesome. [CSS in JS: Benefits, Drawbacks, and Tooling](https://objectpartners.com/2017/11/03/css-in-js-benefits-drawbacks-and-tooling/)
 
-## Roadmap
+Why Gatsby?
+Because Gatsby is blazing fast, and comes with alot of plugins
 
-- [x] [make the starter completely responsive](https://github.com/contentful-userland/gatsby-contentful-starter/issues/2)
-- [ ] [include tags](https://github.com/contentful-userland/gatsby-contentful-starter/issues/3)
-- [x] [support traced placeholders](https://github.com/contentful-userland/gatsby-contentful-starter/issues/4)
-- [ ] [add i18n](https://github.com/contentful-userland/gatsby-contentful-starter/issues/6)
+## For more information
 
-## Other resources
+- [Github](https://github.com/muhajirframe/gatsby-tailwind-emotion-starter)
+- [gatsby-tailwind-emotion-starter](https://github.com/muhajirframe/gatsby-tailwind-emotion-starter)
+- Got a question? [Submit an issue](https://github.com/muhajirframe/gatsby-tailwind-emotion-starter/issues/new)
 
-- Tutorial video series ["Building a blazing fast website with GatsbyJS and Contentful"](https://www.youtube.com/watch?v=Ek4o40w1tH4&list=PL8KiuH6vpACV-F7jXribe4YveGBhBeG9A) by @Khaledgarbaya
+## Contributing
+
+- [Submit an idea](https://github.com/muhajirframe/gatsby-tailwind-emotion-starter/issues/new)
+- Make a pull request
+
+## Related
+- [react-tailwind-emotion-starter](https://github.com/muhajirframe/react-tailwind-emotion-starter) A React + Tailwind + EmotionJs starter based on [create-react-app](https://github.com/facebook/create-react-app)
+- [vscode-tailwind-styled-snippets](https://github.com/muhajirframe/vscode-tailwind-styled-snippets)
+- [gatsby-plugin-tailwindcss](https://github.com/muhajirframe/gatsby-plugin-tailwincss)
+
+**Enjoy!**

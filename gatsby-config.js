@@ -21,47 +21,25 @@ if (!spaceId || !accessToken) {
 
 module.exports = {
   siteMetadata: {
-    title: 'Marisa Morby · Transformation Designer and UX Researcher',
-    titleTemplate: '%s · Marisa Morby',
-    description:
-      'Marisa Morby is a product manager, user experience researcher, designer, and strategist living in Portland, OR.',
-    url: 'https://marisamorby.com', // no trailing slash!
-    image: '/images/marisa-morby.jpg',
-    owner: 'Marisa Morby',
-    twitterUsername: '@marisamorby',
-    facebookAppID: '',
-    nav: [
-      { path: 'https://medium.com/@marisamorby', name: 'Blog', hidden: true },
-      { path: '/#about', name: 'About' },
-      { path: '/#process', name: 'Process' },
-      { path: '/#speaking', name: 'Speaking' },
-      { path: '/#contact', name: 'Contact' },
-    ],
-    categories: [
-      { slug: 'confidence', name: 'Confidence' },
-      { slug: 'better-humans', name: 'Better Humans' },
-      { slug: 'business-basics', name: 'Business Basics' },
-      { slug: 'uncomfortable-things', name: 'Uncomfortable Things' },
-    ],
+    title: 'Gatsby Tailwind Emotion Starter',
   },
-  pathPrefix: '/gatsby-contentful-starter',
   plugins: [
-    'gatsby-plugin-tailwindcss',
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
-    'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-tailwindcss',
+    'gatsby-plugin-emotion',
+    'gatsby-plugin-react-helmet',
     {
-      resolve: 'gatsby-source-contentful',
-      options: contentfulConfig,
-    },
-    `gatsby-plugin-postcss`,
-    {
-      resolve: 'gatsby-plugin-purgecss',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        tailwind: true,
-        printRejected: true,
-        purgeOnly: ['src/css/style.css'], // Purge only tailwind
+        name: 'gatsby-tailwind-emotion-starter',
+        short_name: 'starter',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#663399',
+        display: 'minimal-ui',
+        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
       },
     },
     {
@@ -70,6 +48,11 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
         omitGoogleFont: true,
       },
+    },
+    'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-source-contentful`,
+      options: contentfulConfig,
     },
   ],
 }
