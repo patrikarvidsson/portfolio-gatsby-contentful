@@ -11,7 +11,7 @@ const Hero = styled.div`
   ${tw`w-3/4 my-24 flex items-center`};
 `
 const Title = styled.h1`
-  ${tw`text-4xl lg:text-5xl`};
+  ${tw`text-4xl lg:text-5xl text-black`};
 `
 const Subline = styled.div`
   ${tw`text-lg md:text-xl`};

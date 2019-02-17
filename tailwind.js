@@ -208,7 +208,7 @@ module.exports = {
       'sans-serif',
     ],
     'serif': [
-      'arno-pro',
+      'arno-pro-display',
       'Georgia',
       'Constantia',
       'Lucida Bright',

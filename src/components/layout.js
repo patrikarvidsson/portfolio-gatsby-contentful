@@ -41,7 +41,7 @@ const Layout = ({ children }) => (
           ]}
         >
           <html lang="en" />
-          <link rel="stylesheet" href="https://use.typekit.net/ojc7pzz.css" />
+          <link rel="stylesheet" href="https://use.typekit.net/rqw6bnt.css" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>{children}</Content>
