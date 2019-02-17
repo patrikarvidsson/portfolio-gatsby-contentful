@@ -22,7 +22,7 @@ const PreviewArticle = ({ article }) => (
         <Link className="leading-normal py-0" to={`/blog/${article.slug}`}>{article.title}</Link>
       </Title>
       <Description>
-        {article.description.description}
+        {article.description}
       </Description>
       <PublishDate>{article.publishDate}</PublishDate>
     </Container>

@@ -75,9 +75,7 @@ export const pageQuery = graphql`
              ...GatsbyContentfulFluid_tracedSVG
             }
           }
-          description {
-            description
-          }
+          description
         }
       }
     }
@@ -93,9 +91,6 @@ export const pageQuery = graphql`
             fluid(maxWidth: 800, maxHeight: 560, resizingBehavior: FILL) {
              ...GatsbyContentfulFluid_tracedSVG
             }
-          }
-          description {
-            description
           }
         }
       }
