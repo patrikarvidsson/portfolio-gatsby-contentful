@@ -5,7 +5,6 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SmallCase from '../components/small-case'
 
 const Hero = styled.div`
   ${tw`w-full xl:w-3/4 mt-12 mb-10 md:my-24 flex items-center`};
@@ -16,41 +15,31 @@ const Title = styled.h1`
 const Subline = styled.div`
   ${tw`text-lg md:text-xl`};
 `
-const Section = styled.section`
+const Article = styled.article`
   ${tw``};
 `
-const Articles = styled.div`
-  ${tw`flex flex-wrap my-4`};
-`
-class PortfolioPage extends React.Component {
+class PortfolioEntryTemplate extends React.Component {
   render() {
     const cases = get(this, 'props.data.allContentfulPortfolioEntry.edges')
     return (
       <Layout>
         <Hero>
           <div>
-            <Title>Clients I've worked with and projects I've been involved in throughout the years.</Title>
+            <Title>{cases.title}</Title>
             <Subline>Unlinked projects are not ready to be presented yet for various reasons. Contact me for more information. Design studies and explorations can be found in my <a href="/journal">journal</a>.</Subline>
           </div>
         </Hero>
-        <Section>
-          <Articles>
-            {cases.map(({ node }) => {
-              return (
-                <SmallCase entry={node} key={node.slug} />
-              )
-            })}
-          </Articles>
-        </Section>
+        <Article>
+        </Article>
       </Layout>
     )
   }
 }
 
-export default PortfolioPage
+export default PortfolioEntryTemplate
 
 export const pageQuery = graphql`
-  query PortfolioQuery {
+  query PortfolioEntryQuery {
     allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 6) {
       edges {
         node {
