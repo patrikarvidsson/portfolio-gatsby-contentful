@@ -12,3 +12,12 @@ a:hover {
   color: #3273dc;
   background: #e0eafa;
 }
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  padding: 1px 0;
+}

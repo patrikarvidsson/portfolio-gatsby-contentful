@@ -9,7 +9,7 @@ import Footer from './footer'
 import './layout.css'
 
 const Content = styled.div`
-  ${tw`px-32 py-8`};
+  ${tw`px-32 py-8 w-3/4 mx-auto`};
 `
 
 const Layout = ({ children }) => (

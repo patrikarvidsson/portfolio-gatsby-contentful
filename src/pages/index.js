@@ -5,6 +5,8 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import styled from 'react-emotion'
 
+import PreviewArticle from '../components/preview-article'
+
 const Hero = styled.div`
   ${tw`w-3/4 my-24 flex items-center`};
 `
@@ -14,10 +16,20 @@ const Title = styled.h1`
 const Subline = styled.div`
   ${tw`text-lg md:text-xl`};
 `
+const Section = styled.section`
+  ${tw``};
+`
+const SectionTitle = styled.header`
+  ${tw`text-black font-sans font-semibold tracking-wide text-sm uppercase`};
+`
+const Articles = styled.div`
+  ${tw`flex flex-wrap my-4`};
+`
 
 class IndexPage extends React.Component {
   render() {
     const [siteSettings] = get(this, 'props.data.allContentfulSettings.edges')
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     return (
       <Layout>
         <Hero>
@@ -26,6 +38,16 @@ class IndexPage extends React.Component {
             <Subline>{siteSettings.node.subline} <a href="mailto:hello@patrikarvidson.com">Send me an e-mail!</a></Subline>
           </div>
         </Hero>
+        <Section id="latest-articles">
+          <SectionTitle>Recent articles</SectionTitle>
+          <Articles>
+            {posts.map(({ node }) => {
+              return (
+                <PreviewArticle article={node} key={node.slug} />
+              )
+            })}
+          </Articles>
+        </Section>
       </Layout>
     )
   }
