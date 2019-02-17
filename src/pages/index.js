@@ -8,10 +8,10 @@ import styled from 'react-emotion'
 import PreviewArticle from '../components/preview-article'
 
 const Hero = styled.div`
-  ${tw`w-3/4 my-24 flex items-center`};
+  ${tw`w-full md:w-3/4 mt-12 mb-16 md:my-24 flex items-center`};
 `
 const Title = styled.h1`
-  ${tw`text-4xl lg:text-5xl text-black`};
+  ${tw`text-3xl md:text-5xl text-black`};
 `
 const Subline = styled.div`
   ${tw`text-lg md:text-xl`};
