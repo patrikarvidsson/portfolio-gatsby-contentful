@@ -9,7 +9,7 @@ import PreviewArticle from '../components/preview-article'
 import PreviewCase from '../components/preview-case'
 
 const Hero = styled.div`
-  ${tw`w-full md:w-3/4 mt-12 mb-16 md:my-24 flex items-center`};
+  ${tw`w-full xl:w-3/4 mt-12 mb-16 md:my-24 flex items-center`};
 `
 const Title = styled.h1`
   ${tw`text-3xl md:text-5xl text-black`};
