@@ -21,3 +21,32 @@ h5 a,
 h6 a {
   padding: 1px 0;
 }
+
+/* Front page styling */
+
+#latestWork {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+#latestWork > div {
+  margin-top: 2rem;
+  margin-left: -3rem;
+  margin-right: -3rem;
+}
+
+#latestWork > div > div {
+  text-align: center;
+}
+
+#latestWork > div > div:nth-child(odd) {
+  margin-bottom: 4rem;
+}
+
+#latestWork > div > div:nth-child(even) {
+  margin-top: 4rem;
+}
+
+#latestWork > div > div:nth-child(2n+4) {
+  margin-top: 4rem;
+}
