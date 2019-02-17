@@ -21,11 +21,9 @@ const PreviewArticle = ({ article }) => (
       <Title>
         <Link className="leading-normal py-0" to={`/blog/${article.slug}`}>{article.title}</Link>
       </Title>
-      <Description
-        dangerouslySetInnerHTML={{
-          __html: article.description.childMarkdownRemark.html,
-        }}
-      />
+      <Description>
+        {article.description.description}
+      </Description>
       <PublishDate>{article.publishDate}</PublishDate>
     </Container>
 )

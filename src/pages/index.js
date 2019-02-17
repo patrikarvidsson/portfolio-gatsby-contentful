@@ -76,9 +76,7 @@ export const pageQuery = graphql`
             }
           }
           description {
-            childMarkdownRemark {
-              html
-            }
+            description
           }
         }
       }
@@ -97,9 +95,7 @@ export const pageQuery = graphql`
             }
           }
           description {
-            childMarkdownRemark {
-              html
-            }
+            description
           }
         }
       }
