@@ -53,10 +53,7 @@ h6 a {
 
 /* Journal and Portfolio */
 
-article#main p > img {
+article#main .gatsby-resp-image-wrapper {
   margin-top: 2rem;
-  margin-bottom: 1rem;
-  margin-left: -10%;
-  min-width: 120%;
-  border-radius: .25rem;
+  margin-bottom: 3rem;
 }
