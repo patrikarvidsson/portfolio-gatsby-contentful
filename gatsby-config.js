@@ -57,7 +57,6 @@ module.exports = {
         }
       }
     },
-    'gatsby-plugin-netlify-cache',
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-contentful`,
