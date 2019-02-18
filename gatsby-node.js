@@ -13,13 +13,14 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/blog-post.js')
-    const portfolioEntry = path.resolve('./src/templates/portfolio-entry.js')
+    const blogPostTemplate = path.resolve('src/templates/blog-post.js')
+    const portfolioEntryTemplate = path.resolve('src/templates/portfolio-entry.js')
+    // Query for markdown nodes to use in creating pages.
     resolve(
       graphql(
         `
           {
-            allContentfulBlogPost {
+            allContentfulBlogPost(limit: 1000) {
               edges {
                 node {
                   title
@@ -27,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
                 }
               }
             }
-            allContentfulPortfolioEntry {
+            allContentfulPortfolioEntry(limit: 1000) {
               edges {
                 node {
                   title
@@ -39,7 +40,6 @@ exports.createPages = ({ graphql, actions }) => {
           `
       ).then(result => {
         if (result.errors) {
-          console.log(result.errors)
           reject(result.errors)
         }
 
@@ -47,20 +47,20 @@ exports.createPages = ({ graphql, actions }) => {
         posts.forEach((post, index) => {
           createPage({
             path: `/journal/${post.node.slug}/`,
-            component: blogPost,
+            component: blogPostTemplate,
             context: {
               slug: post.node.slug
             },
           })
         })
 
-        const cases = result.data.allContentfulPortfolioEntry.edges
-        cases.forEach((post, index) => {
+        const entries = result.data.allContentfulPortfolioEntry.edges
+        entries.forEach((entry, index) => {
           createPage({
-            path: `/portfolio/${post.node.slug}/`,
-            component: portfolioEntry,
+            path: `/portfolio/${entry.node.slug}/`,
+            component: portfolioEntryTemplate,
             context: {
-              slug: post.node.slug
+              slug: entry.node.slug
             },
           })
         })
@@ -68,3 +68,4 @@ exports.createPages = ({ graphql, actions }) => {
     )
   })
 }
+

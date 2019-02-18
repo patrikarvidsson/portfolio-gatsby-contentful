@@ -19,7 +19,7 @@ const PublishDate = styled.p`
 const PreviewArticle = ({ article }) => (
     <Container>
       <Title>
-        <Link className="leading-normal py-0" to={`/blog/${article.slug}`}>{article.title}</Link>
+        <Link className="leading-normal py-0" to={`/journal/${article.slug}`}>{article.title}</Link>
       </Title>
       <Description>
         {article.description}

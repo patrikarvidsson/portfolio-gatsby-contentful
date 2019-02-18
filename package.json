@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "author": "Muhammad Muhajir <muhajirframe@gmail.com>",
   "dependencies": {
+    "bluebird": "^3.5.3",
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
     "gatsby": "^2.1.4",

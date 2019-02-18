@@ -20,12 +20,12 @@ const Article = styled.article`
 `
 class PortfolioEntryTemplate extends React.Component {
   render() {
-    const cases = get(this, 'props.data.allContentfulPortfolioEntry.edges')
+    const entry = get(this, 'props.data.allContentfulPortfolioEntry.edges')
     return (
       <Layout>
         <Hero>
           <div>
-            <Title>{cases.title}</Title>
+            <Title>Title</Title>
             <Subline>Below are projects and clients I've had the opportunity to work with throughout the years. Design studies and explorations can be found in my <a href="/journal">journal</a>.</Subline>
           </div>
         </Hero>

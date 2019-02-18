@@ -23,7 +23,7 @@ const SmallPost = ({ post }) => (
     <Container>
       <Image alt="" fluid={post.heroImage.fluid} />
       <Title>
-        <Link className="leading-normal py-0" to={`/blog/${post.slug}`}>{post.title}</Link>
+        <Link className="leading-normal py-0" to={`/journal/${post.slug}`}>{post.title}</Link>
       </Title>
       <Description>
         {post.description}
