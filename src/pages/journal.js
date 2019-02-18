@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
-import SmallCase from '../components/small-case'
+import SmallPost from '../components/small-post'
 
 const Hero = styled.div`
   ${tw`w-full xl:w-3/4 mt-12 mb-10 md:my-24 flex items-center`};
@@ -22,22 +22,22 @@ const Section = styled.section`
 const Articles = styled.div`
   ${tw`flex flex-wrap my-4`};
 `
-class PortfolioPage extends React.Component {
+class JournalPage extends React.Component {
   render() {
-    const cases = get(this, 'props.data.allContentfulPortfolioEntry.edges')
+    const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     return (
       <Layout>
         <Hero>
           <div>
-            <Title>Clients I've worked with and projects I've been involved in throughout the years.</Title>
-            <Subline>Design studies and explorations can be found in my <a href="/journal">journal</a>.</Subline>
+            <Title>Design journal</Title>
+            <Subline>A collection of articles about design, workflows and other things.</Subline>
           </div>
         </Hero>
         <Section>
           <Articles>
-            {cases.map(({ node }) => {
+            {posts.map(({ node }) => {
               return (
-                <SmallCase entry={node} key={node.slug} />
+                <SmallPost post={node} key={node.slug} />
               )
             })}
           </Articles>
@@ -47,15 +47,14 @@ class PortfolioPage extends React.Component {
   }
 }
 
-export default PortfolioPage
+export default JournalPage
 
 export const pageQuery = graphql`
-  query PortfolioQuery {
-    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 6) {
+  query JournalQuery {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 6) {
       edges {
         node {
           title
-          clientName
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags

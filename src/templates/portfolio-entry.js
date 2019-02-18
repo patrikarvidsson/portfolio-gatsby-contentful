@@ -26,7 +26,7 @@ class PortfolioEntryTemplate extends React.Component {
         <Hero>
           <div>
             <Title>{cases.title}</Title>
-            <Subline>Unlinked projects are not ready to be presented yet for various reasons. Contact me for more information. Design studies and explorations can be found in my <a href="/journal">journal</a>.</Subline>
+            <Subline>Below are projects and clients I've had the opportunity to work with throughout the years. Design studies and explorations can be found in my <a href="/journal">journal</a>.</Subline>
           </div>
         </Hero>
         <Article>
