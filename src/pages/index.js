@@ -67,7 +67,6 @@ class IndexPage extends React.Component {
 
 export default IndexPage
 
-
 export const pageQuery = graphql`
   query HomeQuery {
     site {
