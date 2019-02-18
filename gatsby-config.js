@@ -49,6 +49,14 @@ module.exports = {
         omitGoogleFont: true,
       },
     },
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        typekit: {
+          id: 'rqw6bnt'
+        }
+      }
+    },
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-contentful`,
