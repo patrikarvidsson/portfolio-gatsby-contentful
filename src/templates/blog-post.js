@@ -24,7 +24,7 @@ class BlogPostTemplate extends React.Component {
       <Layout>
         <Hero>
           <div>
-            <Title>{post.node.title}</Title>
+            <Title>Title</Title>
             <Subline>Unlinked projects are not ready to be presented yet for various reasons. Contact me for more information. Design studies and explorations can be found in my <a href="/journal">journal</a>.</Subline>
           </div>
         </Hero>
