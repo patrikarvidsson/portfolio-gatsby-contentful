@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import get from 'lodash/get'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
