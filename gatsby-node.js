@@ -4,12 +4,22 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('src/templates/blog-post.js')
+    const blogPost = path.resolve('src/templates/article-template.js')
+    const portfolioEntry = path.resolve('src/templates/case-template.js')
+
     resolve(
       graphql(
         `
           {
             allContentfulBlogPost {
+              edges {
+                node {
+                  title
+                  slug
+                }
+              }
+            }
+            allContentfulPortfolioEntry {
               edges {
                 node {
                   title
@@ -32,6 +42,17 @@ exports.createPages = ({ graphql, actions }) => {
             component: blogPost,
             context: {
               slug: post.node.slug
+            },
+          })
+        })
+
+        const entries = result.data.allContentfulPortfolioEntry.edges
+        entries.forEach((entry, index) => {
+          createPage({
+            path: `/portfolio/${entry.node.slug}/`,
+            component: portfolioEntry,
+            context: {
+              slug: entry.node.slug
             },
           })
         })
