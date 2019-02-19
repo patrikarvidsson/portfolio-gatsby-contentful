@@ -4,22 +4,25 @@ import Img from 'gatsby-image'
 import styled from 'react-emotion'
 
 const Container = styled.div`
-  ${tw`w-full md:w-1/2 md:pr-24 mb-4 md:mb-0`};
+  ${tw`w-full py-4 border-t-0 border-l-0 border-r-0 border-b border-solid border-grey-light`};
 `
 const Title = styled.h3`
-  ${tw`leading-normal py-0 my-3 text-2xl`};
+  ${tw`leading-normal py-0 my-2 text-xl font-sans font-semibold`};
+`
+const Anchor = styled(Link)`
+  ${tw`leading-normal py-0 my-3`};
 `
 const Description = styled.p`
   ${tw`my-2 text-base`};
 `
 const PublishDate = styled.p`
-  ${tw`my-2`};
+  ${tw`my-2 text-black`};
 `
 
 const PreviewArticle = ({ article }) => (
     <Container>
       <Title>
-        <Link className="leading-normal py-0" to={`/journal/${article.slug}`}>{article.title}</Link>
+        <Anchor to={`/journal/${article.slug}`}>{article.title}</Anchor>
       </Title>
       <Description>
         {article.description}

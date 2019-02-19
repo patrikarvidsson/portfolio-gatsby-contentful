@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 
 const Container = styled.footer`
-  ${tw`px-6 md:px-0 py-8 md:py-12 mt-8 md:mt-16 bg-grey-lightest text-center`};
+  ${tw`px-6 md:px-0 py-8 md:py-12 bg-grey-lightest text-center`};
 `
 const Inner = styled.div`
   ${tw`opacity-75`};

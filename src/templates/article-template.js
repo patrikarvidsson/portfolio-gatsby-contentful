@@ -52,7 +52,7 @@ class BlogPostTemplate extends React.Component {
             <Title>{post.title}</Title>
             <PublishDate>{post.publishDate}</PublishDate>
           </Header>
-          <Image alt={post.title} fluid={post.heroImage.fluid} />
+          <Image alt={post.title} title={post.title} fluid={post.heroImage.fluid} />
           <Content
             dangerouslySetInnerHTML={{
               __html: post.body.childMarkdownRemark.html,

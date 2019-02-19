@@ -21,14 +21,6 @@ const Layout = ({ children }) => (
             title
           }
         }
-        allContentfulSettings(filter: { contentful_id: { eq: "4YFMbGrvKsFO9xnO8KUzFz" } }) {
-          edges {
-            node {
-              tagline
-              subline
-            }
-          }
-        }
       }
     `}
     render={data => (

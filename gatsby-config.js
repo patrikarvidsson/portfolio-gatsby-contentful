@@ -61,13 +61,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: 'gatsby-tailwind-emotion-starter',
-        short_name: 'starter',
+        name: 'Patrik Arvidsson',
+        short_name: 'Patrik Arvidsson',
         start_url: '/',
-        background_color: '#663399',
-        theme_color: '#663399',
+        background_color: '#3273dc',
+        theme_color: '#3273dc',
         display: 'minimal-ui',
-        icon: 'src/images/gatsby-icon.png', // This path is relative to the root of the site.
+        icon: 'src/images/logo-blue.png', // This path is relative to the root of the site.
       },
     },
     {
@@ -76,14 +76,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
         omitGoogleFont: true,
       },
-    },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'rqw6bnt'
-        }
-      }
     },
     {
       resolve: `gatsby-plugin-sitemap`,
@@ -119,33 +111,44 @@ module.exports = {
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.
         includeInDevelopment: false,
-
-        // Specify optional GTM environment details.
-        //gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
-        //gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
       },
     },
-    'gatsby-plugin-offline',
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://patrikarvidsson.com`,
+      },
+    },
+
+    `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
-    {
-      resolve: `gatsby-plugin-hotjar`,
-      options: {
-        id: `1178731`,
-      },
-    },
+    //{
+    //  resolve: `gatsby-plugin-hotjar`,
+    //  options: {
+    //    id: `1178731`,
+    //  },
+    //},
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
-        headers: {}, // option to add more headers. `Link` headers are transformed by the below criteria
+        headers: {
+          "/*.css": [
+            "Cache-Control: public, max-age=31536000, immutable",
+          ],
+          "/*.js": [
+            "Cache-Control: public, max-age=31536000, immutable",
+          ]
+        }, // option to add more headers. `Link` headers are transformed by the below criteria
         allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
-        mergeSecurityHeaders: false, // boolean to turn off the default security headers
-        mergeLinkHeaders: false, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: false, // boolean to turn off the default caching headers
+        mergeSecurityHeaders: true, // boolean to turn off the default security headers
+        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+        mergeCachingHeaders: true, // boolean to turn off the default caching headers
         transformHeaders: (headers, path) => headers, // optional transform for manipulating headers under each path (e.g.sorting), etc.
-        generateMatchPathRewrites: false, // boolean to turn off automatic creation of redirect rules for client only paths
+        generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
       },
     },
   ],

@@ -18,7 +18,7 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s`}// | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
@@ -57,42 +57,42 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
                 content: 'QlRmuLQWttdkbKlZ0ZwIBX3xv0M8ouqTW3wE2Eg_jKI'
               }
             ]
-              .concat(metaImage ? [
-                {
-                  property: `og:image`,
-                  content: metaImage
-                },
-                {
-                  property: `og:image:alt`,
-                  content: title,
-                },
-                {
-                  property: 'og:image:width',
-                  content: image.width
-                },
-                {
-                  property: 'og:image:height',
-                  content: image.height
-                },
-                {
-                  name: `twitter:card`,
-                  content: `summary_large_image`,
-                }
-              ] : [
-                {
-                  name: `twitter:card`,
-                  content: `summary`,
-                },
-              ])
-              .concat(
-                keywords.length > 0
-                  ? {
-                      name: `keywords`,
-                      content: keywords.join(`, `),
+                  .concat(metaImage ? [
+                    {
+                      property: `og:image`,
+                      content: metaImage
+                    },
+                    {
+                      property: `og:image:alt`,
+                      content: title,
+                    },
+                    {
+                      property: 'og:image:width',
+                      content: image.width
+                    },
+                    {
+                      property: 'og:image:height',
+                      content: image.height
+                    },
+                    {
+                      name: `twitter:card`,
+                      content: `summary_large_image`,
                     }
-                  : []
-              )
-              .concat(meta)}
+                  ] : [
+                    {
+                      name: `twitter:card`,
+                      content: `summary`,
+                    },
+                  ])
+                  .concat(
+                    keywords.length > 0
+                      ? {
+                        name: `keywords`,
+                        content: keywords.join(`, `),
+                      }
+                    : []
+                  )
+                  .concat(meta)}
           />
         )
       }}

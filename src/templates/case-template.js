@@ -52,7 +52,7 @@ class PortfolioEntryTemplate extends React.Component {
             <Title>{entry.clientName}</Title>
             <PublishDate>{entry.publishDate}</PublishDate>
           </Header>
-          <Image alt={entry.title} fluid={entry.heroImage.fluid} />
+          <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
           <Content
             dangerouslySetInnerHTML={{
               __html: entry.body.childMarkdownRemark.html,

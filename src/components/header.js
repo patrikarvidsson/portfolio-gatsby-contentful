@@ -7,7 +7,7 @@ const Container = styled.div`
   ${tw``};
 `
 const HeaderBar = styled.div`
-  ${tw`pt-6 md:pt-16 px-6 md:px-24 flex items-center justify-between w-full`};
+  ${tw`pt-6 md:pt-8 lg:pt-16 px-6 md:px-6 lg:px-24 flex items-center justify-between w-full`};
 `
 const LogoLink = styled(Link)`
   ${tw`no-underline text-inherit shadow-none hover:bg-transparent`};
@@ -25,7 +25,7 @@ const NavItem = styled.li`
   ${tw`ml-4 md:ml-6 inline-block no-underline`};
 `
 const NavItemLink = styled(Link)`
-  ${tw`no-underline font-sans font-semibold text-black hover:text-blue shadow-none`};
+  ${tw`no-underline font-sans font-bold text-black hover:text-blue shadow-none`};
 `
 
 const Header = ({ siteTitle }) => (

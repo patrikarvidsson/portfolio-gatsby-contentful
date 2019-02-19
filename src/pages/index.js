@@ -10,22 +10,25 @@ import PreviewArticle from '../components/preview-article'
 import PreviewCase from '../components/preview-case'
 
 const Hero = styled.div`
-  ${tw`w-full xl:w-3/4 mt-12 mb-16 md:my-24 flex items-center`};
+  ${tw`w-full md:max-w-md my-8 md:mt-12 md:mb-20 lg:my-24 flex items-center`};
+`
+const Hello = styled.div`
+  ${tw`text-4xl md:text-5xl font-sans text-black font-black`};
 `
 const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl text-black`};
+  ${tw`text-3xl md:text-4xl text-black font-normal my-4 md:my-8`};
 `
 const Subline = styled.div`
-  ${tw`text-lg md:text-xl`};
+  ${tw`text-lg md:text-xl w-full md:w-2/3`};
 `
 const Section = styled.section`
   ${tw``};
 `
 const SectionTitle = styled.h2`
-  ${tw`text-black font-sans font-semibold tracking-wide text-sm uppercase`};
+  ${tw`text-bold font-sans font-black tracking-wide text-sm uppercase`};
 `
 const Articles = styled.div`
-  ${tw`flex flex-wrap my-4`};
+  ${tw`flex flex-wrap my-4 font-sans text-base text-grey`};
 `
 
 class IndexPage extends React.Component {
@@ -36,17 +39,27 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <SEO
-          title="Interdisciplinary designer based in Gothenburg, Sweden"
+          title="Patrik Arvidsson, Interdisciplinary interaction designer"
+          description="Patrik is an interdisciplinary designer living in Gothenburg, Sweden. He helps clients reimagine, prototype and design solutions for human interaction problems."
           keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
         />
         <Hero>
           <div>
-            <Title>{siteSettings.node.tagline}</Title>
-            <Subline>{siteSettings.node.subline} <a href="mailto:hello@patrikarvidson.com">Send me an e-mail!</a></Subline>
+            <Hello>Hello,</Hello>
+            <Title
+            dangerouslySetInnerHTML={{
+              __html: siteSettings.node.headline.childMarkdownRemark.html,
+            }}
+            />
+            <Subline
+            dangerouslySetInnerHTML={{
+              __html: siteSettings.node.subline.childMarkdownRemark.html,
+            }}
+            />
           </div>
         </Hero>
-        <Section id="latestArticles">
-          <SectionTitle>Recent articles</SectionTitle>
+        {/*<Section id="latestArticles">
+          <SectionTitle>Latest journal articles</SectionTitle>
           <Articles>
             {posts.map(({ node }) => {
               return (
@@ -54,7 +67,7 @@ class IndexPage extends React.Component {
               )
             })}
           </Articles>
-        </Section>
+          </Section>*/}
         <Section id="latestWork">
           <SectionTitle>Recent cases</SectionTitle>
           <Articles>
@@ -115,8 +128,16 @@ export const pageQuery = graphql`
     allContentfulSettings(filter: { contentful_id: { eq: "4YFMbGrvKsFO9xnO8KUzFz" } }) {
       edges {
         node {
-          tagline
-          subline
+          headline {
+            childMarkdownRemark {
+              html
+            }
+          }
+          subline {
+            childMarkdownRemark {
+              html
+            }
+          }
         }
       }
     }

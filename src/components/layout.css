@@ -1,3 +1,75 @@
+/* Font Face */
+
+@font-face {
+  font-display: swap;
+  font-family:"arno-pro-display";
+  src:url("../utils/fonts/arno-pro-bold-display.woff2") format("woff2"),
+      url("../utils/fonts/arno-pro-bold-display.woff") format("woff"),
+      url("../utils/fonts/arno-pro-bold-display.otf") format("opentype");
+  font-style:normal;
+  font-weight:700;
+}
+
+@font-face {
+  font-display: swap;
+  font-family:"arno-pro-display";
+  src:url("../utils/fonts/arno-pro-display.woff2") format("woff2"),
+      url("../utils/fonts/arno-pro-display.woff") format("woff"),
+      url("../utils/fonts/arno-pro-display.otf") format("opentype");
+  font-style:normal;
+  font-weight:400;
+}
+
+@font-face {
+  font-display: swap;
+  font-family:"arno-pro-display";
+  src:url("../utils/fonts/arno-pro-semibold-display.woff2") format("woff2"),
+      url("../utils/fonts/arno-pro-semibold-display.woff") format("woff"),
+      url("../utils/fonts/arno-pro-semibold-display.otf") format("opentype");
+  font-style:normal;
+  font-weight:600;
+}
+
+@font-face {
+  font-display: swap;
+  font-family:"source-sans-pro";
+  src:url("../utils/fonts/SourceSansPro-Regular.woff2") format("woff2"),
+      url("../utils/fonts/SourceSansPro-Regular.woff") format("woff"),
+      url("../utils/fonts/SourceSansPro-Regular.otf") format("opentype");
+  font-style:normal;
+  font-weight:400;
+}
+
+@font-face {
+  font-display: swap;
+  font-family:"source-sans-pro";
+  src:url("../utils/fonts/SourceSansPro-Semibold.woff2") format("woff2"),
+      url("../utils/fonts/SourceSansPro-Semibold.woff") format("woff"),
+      url("../utils/fonts/SourceSansPro-Semibold.otf") format("opentype");
+  font-style:normal;
+  font-weight:600;
+}
+
+@font-face {
+  font-display: swap;
+  font-family:"source-sans-pro";
+  src:url("../utils/fonts/SourceSansPro-Bold.woff2") format("woff2"),
+      url("../utils/fonts/SourceSansPro-Bold.woff") format("woff"),
+      url("../utils/fonts/SourceSansPro-Bold.otf") format("opentype");
+  font-style:normal;
+  font-weight:700;
+}
+
+@font-face {
+  font-display: swap;
+  font-family:"source-sans-pro";
+  src:url("../utils/fonts/SourceSansPro-Black.woff2") format("woff2"),
+      url("../utils/fonts/SourceSansPro-Black.woff") format("woff"),
+      url("../utils/fonts/SourceSansPro-Black.otf") format("opentype");
+  font-style:normal;
+  font-weight:900;
+}
+
 /* Anchors */
 
 a {
@@ -24,31 +96,12 @@ h6 a {
 
 /* Front page styling */
 
-#latestWork {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-}
-
-#latestWork > div {
-  margin-top: 2rem;
-  margin-left: -3rem;
-  margin-right: -3rem;
-}
-
-#latestWork > div > div {
-  text-align: center;
-}
-
 #latestWork > div > div:nth-child(odd) {
-  margin-bottom: 4rem;
+  padding-right: 1rem;
 }
 
 #latestWork > div > div:nth-child(even) {
-  margin-top: 4rem;
-}
-
-#latestWork > div > div:nth-child(2n+4) {
-  margin-top: 4rem;
+  padding-left: 1rem;
 }
 
 /* Journal and Portfolio */

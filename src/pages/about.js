@@ -23,8 +23,8 @@ class AboutPage extends React.Component {
     return (
       <Layout>
         <SEO
-          title="Interdisciplinary designer based in Gothenburg, Sweden"
-          description="I strive to create beautiful solutions for human interaction problems in digital environments, with a focus on services that provide positive change in people’s lives."
+          title="About Patrik, Interdisciplinary interaction designer"
+          description="Patrik is an interdisciplinary designer living in Gothenburg, Sweden. He helps clients reimagine, prototype and design solutions for human interaction problems."
           keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
         />
         <Wrapper>
