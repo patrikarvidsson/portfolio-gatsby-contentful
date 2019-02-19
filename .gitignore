@@ -51,6 +51,7 @@ typings/
 # Output of 'npm pack'
 *.tgz
 
+<<<<<<< HEAD
 # Yarn Integrity file
 .yarn-integrity
 
@@ -72,3 +73,21 @@ public
 # Other
 
 old
+=======
+# dotenv environment variables file
+.env
+
+# gatsby files
+.cache/
+public
+
+# Mac files
+.DS_Store
+
+# Yarn
+yarn-error.log
+.pnp/
+.pnp.js
+# Yarn Integrity file
+.yarn-integrity
+>>>>>>> Truncate history
