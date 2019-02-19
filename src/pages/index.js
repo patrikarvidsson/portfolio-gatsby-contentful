@@ -4,6 +4,7 @@ import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import styled from 'react-emotion'
+import SEO from '../components/seo'
 
 import PreviewArticle from '../components/preview-article'
 import PreviewCase from '../components/preview-case'
@@ -20,7 +21,7 @@ const Subline = styled.div`
 const Section = styled.section`
   ${tw``};
 `
-const SectionTitle = styled.header`
+const SectionTitle = styled.h2`
   ${tw`text-black font-sans font-semibold tracking-wide text-sm uppercase`};
 `
 const Articles = styled.div`
@@ -34,6 +35,10 @@ class IndexPage extends React.Component {
     const cases = get(this, 'props.data.allContentfulPortfolioEntry.edges')
     return (
       <Layout>
+        <SEO
+          title="Interdisciplinary designer based in Gothenburg, Sweden"
+          keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
+        />
         <Hero>
           <div>
             <Title>{siteSettings.node.tagline}</Title>

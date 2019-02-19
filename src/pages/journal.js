@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
+import SEO from '../components/seo'
 
 import Layout from '../components/layout'
 import SmallPost from '../components/small-post'
@@ -27,6 +28,11 @@ class JournalPage extends React.Component {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     return (
       <Layout>
+        <SEO
+          title="Design journal"
+          description="A collection of articles about design, workflows and other things."
+          keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
+        />
         <Hero>
           <div>
             <Title>Design journal</Title>

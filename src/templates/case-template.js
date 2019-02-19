@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import styled from 'react-emotion'
+import SEO from '../components/seo'
 
 const Article = styled.article`
   ${tw``};
@@ -37,6 +38,7 @@ class PortfolioEntryTemplate extends React.Component {
 
     return (
       <Layout>
+        <SEO title={entry.title} description={entry.description} image={entry.heroImage.fluid} pathname={this.props.location.pathname} />
         <Article id="main">
           <Header>
             <Tags>

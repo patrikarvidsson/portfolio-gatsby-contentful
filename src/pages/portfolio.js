@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
+import SEO from '../components/seo'
 
 import Layout from '../components/layout'
 import SmallCase from '../components/small-case'
@@ -27,6 +28,11 @@ class PortfolioPage extends React.Component {
     const cases = get(this, 'props.data.allContentfulPortfolioEntry.edges')
     return (
       <Layout>
+        <SEO
+          title="Portfolio"
+          description="Clients I've worked with and projects I've been involved in throughout the years."
+          keywords={[`design`, `portfolio`, `ui`, `ux`, `case`]}
+        />
         <Hero>
           <div>
             <Title>Clients I've worked with and projects I've been involved in throughout the years.</Title>

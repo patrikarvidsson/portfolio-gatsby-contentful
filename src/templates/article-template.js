@@ -5,6 +5,7 @@ import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import styled from 'react-emotion'
+import SEO from '../components/seo'
 
 const Article = styled.article`
   ${tw``};
@@ -37,6 +38,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout>
+        <SEO title={post.title} description={post.description} image={post.heroImage.fluid} pathname={this.props.location.pathname} />
         <Article id="main">
           <Header>
             <Tags>
@@ -80,6 +82,11 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1200, resizingBehavior: SCALE) {
          ...GatsbyContentfulFluid_tracedSVG
+        }
+      }
+      metaImage {
+        fluid {
+          src
         }
       }
       description

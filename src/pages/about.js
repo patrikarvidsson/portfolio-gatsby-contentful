@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
+import SEO from '../components/seo'
 
 import Layout from '../components/layout'
 
@@ -21,6 +22,11 @@ class AboutPage extends React.Component {
     const [aboutBody] = get(this, 'props.data.allContentfulAboutBodyTextNode.edges')
     return (
       <Layout>
+        <SEO
+          title="Interdisciplinary designer based in Gothenburg, Sweden"
+          description="I strive to create beautiful solutions for human interaction problems in digital environments, with a focus on services that provide positive change in people’s lives."
+          keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
+        />
         <Wrapper>
           <div>
             <Title>{aboutHeadline.node.headline}</Title>
