@@ -111,10 +111,30 @@ module.exports = {
         }`
       }
     },
+    {
+      resolve: `gatsby-plugin-google-tagmanager`,
+      options: {
+        id: "GTM-56CKRTV",
+
+        // Include GTM in development.
+        // Defaults to false meaning GTM will only be loaded in production.
+        includeInDevelopment: false,
+
+        // Specify optional GTM environment details.
+        //gtmAuth: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_AUTH_STRING",
+        //gtmPreview: "YOUR_GOOGLE_TAGMANAGER_ENVIROMENT_PREVIEW_NAME",
+      },
+    },
     'gatsby-plugin-offline',
     {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
+    },
+    {
+      resolve: `gatsby-plugin-hotjar`,
+      options: {
+        id: `1178731`,
+      },
     },
     {
       resolve: `gatsby-plugin-netlify`,
