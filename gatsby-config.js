@@ -120,7 +120,6 @@ module.exports = {
         siteUrl: `https://patrikarvidsson.com`,
       },
     },
-
     `gatsby-plugin-offline`,
     {
       resolve: `gatsby-source-contentful`,

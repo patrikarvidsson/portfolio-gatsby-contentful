@@ -97,11 +97,20 @@ h6 a {
 /* Front page styling */
 
 #latestWork > div > div:nth-child(odd) {
-  padding-right: 1rem;
+  flex-direction: row-reverse;
 }
 
 #latestWork > div > div:nth-child(even) {
-  padding-left: 1rem;
+}
+
+#latestWork > div > div:nth-child(odd) .imageWrapper {
+  margin-right: 4rem;
+  margin-left: 0;
+}
+
+#latestWork > div > div:nth-child(even) .imageWrapper {
+  margin-left: 4rem;
+  margin-right: 0;
 }
 
 /* Journal and Portfolio */
