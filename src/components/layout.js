@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from './footer'
-import './layout.css'
+import '../sass/layout.sass'
 
 const Content = styled.div`
   ${tw`px-6 py-0 md:py-8 w-full lg:w-4/5 xl:w-2/3 mx-auto`};

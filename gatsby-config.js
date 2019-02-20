@@ -36,6 +36,14 @@ module.exports = {
       resolve: `gatsby-source-contentful`,
       options: contentfulConfig,
     },
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        cssLoaderOptions: {
+          localIdentName: '[hash:base64:4]',
+        },
+      },
+    },
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',

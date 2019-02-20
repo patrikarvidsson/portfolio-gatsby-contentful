@@ -1,0 +1,103 @@
+/* Font Face
+
+@font-face
+  font-display: swap
+  font-family: "arno-pro-display"
+  src: url("../utils/fonts/arno-pro-bold-display.woff2") format("woff2"), url("../utils/fonts/arno-pro-bold-display.woff") format("woff"), url("../utils/fonts/arno-pro-bold-display.otf") format("opentype")
+  font-style: normal
+  font-weight: 700
+
+
+@font-face
+  font-display: swap
+  font-family: "arno-pro-display"
+  src: url("../utils/fonts/arno-pro-display.woff2") format("woff2"), url("../utils/fonts/arno-pro-display.woff") format("woff"), url("../utils/fonts/arno-pro-display.otf") format("opentype")
+  font-style: normal
+  font-weight: 400
+
+
+@font-face
+  font-display: swap
+  font-family: "arno-pro-display"
+  src: url("../utils/fonts/arno-pro-semibold-display.woff2") format("woff2"), url("../utils/fonts/arno-pro-semibold-display.woff") format("woff"), url("../utils/fonts/arno-pro-semibold-display.otf") format("opentype")
+  font-style: normal
+  font-weight: 600
+
+
+@font-face
+  font-display: swap
+  font-family: "source-sans-pro"
+  src: url("../utils/fonts/SourceSansPro-Regular.woff2") format("woff2"), url("../utils/fonts/SourceSansPro-Regular.woff") format("woff"), url("../utils/fonts/SourceSansPro-Regular.otf") format("opentype")
+  font-style: normal
+  font-weight: 400
+
+
+@font-face
+  font-display: swap
+  font-family: "source-sans-pro"
+  src: url("../utils/fonts/SourceSansPro-Semibold.woff2") format("woff2"), url("../utils/fonts/SourceSansPro-Semibold.woff") format("woff"), url("../utils/fonts/SourceSansPro-Semibold.otf") format("opentype")
+  font-style: normal
+  font-weight: 600
+
+
+@font-face
+  font-display: swap
+  font-family: "source-sans-pro"
+  src: url("../utils/fonts/SourceSansPro-Bold.woff2") format("woff2"), url("../utils/fonts/SourceSansPro-Bold.woff") format("woff"), url("../utils/fonts/SourceSansPro-Bold.otf") format("opentype")
+  font-style: normal
+  font-weight: 700
+
+
+@font-face
+  font-display: swap
+  font-family: "source-sans-pro"
+  src: url("../utils/fonts/SourceSansPro-Black.woff2") format("woff2"), url("../utils/fonts/SourceSansPro-Black.woff") format("woff"), url("../utils/fonts/SourceSansPro-Black.otf") format("opentype")
+  font-style: normal
+  font-weight: 900
+
+
+/* Anchors
+
+a
+  color: #000
+  text-decoration: none
+  transition: all 100ms cubic-bezier(0.4, 0, 0.2, 1)
+  box-shadow: inset 0 -3px 0px 0px #e0eafa
+  padding: 3px 0px
+
+  &:hover
+    color: #3273dc
+    background: #e0eafa
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a
+  padding: 1px 0
+
+/* Front page styling
+
+#latestWork .caseContainer
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  align-items: center;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+
+
+  &:nth-child(odd)
+    flex-direction: row-reverse
+
+  &:nth-child(odd) .imageWrapper
+
+  &:nth-child(even) .imageWrapper
+
+/* Journal and Portfolio
+
+article#main .gatsby-resp-image-wrapper
+  margin-top: 2rem
+  margin-bottom: 3rem
