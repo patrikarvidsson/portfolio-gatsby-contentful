@@ -6,24 +6,22 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 
 import Layout from '../components/layout'
-import SmallPost from '../components/small-post'
+import SmallPost from '../components/preview-article'
 
-const Hero = styled.div`
-  ${tw`w-full xl:w-3/4 mt-12 mb-10 md:my-24 flex items-center`};
+const Wrapper = styled.div`
+  ${tw`w-full lg:w-3/4 xl:w-2/3 py-10 lg:py-20 mx-auto`};
 `
-const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl text-black`};
+const Body = styled.div`
+  ${tw`border-t border-l-0 border-r-0 border-b-0 border-solid border-grey-light mt-10`};
 `
-const Subline = styled.div`
-  ${tw`text-lg md:text-xl`};
+const Title = styled.h2`
+  ${tw`text-black font-normal text-4xl md:text-5xl`};
 `
-const Section = styled.section`
-  ${tw``};
+const Subtitle = styled.span`
+  ${tw`text-lg`};
 `
-const Articles = styled.div`
-  ${tw`flex flex-wrap my-4`};
-`
-class JournalPage extends React.Component {
+
+class JournalIndex extends React.Component {
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     return (
@@ -33,27 +31,25 @@ class JournalPage extends React.Component {
           description="A collection of articles about design, workflows and other things."
           keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
         />
-        <Hero>
-          <div>
-            <Title>Design journal</Title>
-            <Subline>A collection of articles about design, workflows and other things.</Subline>
-          </div>
-        </Hero>
-        <Section>
-          <Articles>
+        <Wrapper>
+          <header>
+            <Title>Journal</Title>
+            <Subtitle>A collection of articles about design, workflows and other things.</Subtitle>
+          </header>
+          <Body>
             {posts.map(({ node }) => {
               return (
-                <SmallPost post={node} key={node.slug} />
+                <SmallPost article={node} key={node.slug} />
               )
             })}
-          </Articles>
-        </Section>
+          </Body>
+        </Wrapper>
       </Layout>
     )
   }
 }
 
-export default JournalPage
+export default JournalIndex
 
 export const pageQuery = graphql`
   query JournalQuery {

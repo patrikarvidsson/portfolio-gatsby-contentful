@@ -10,7 +10,7 @@ import PreFooter from './prefooter'
 
 import '../sass/layout.sass'
 
-const Content = styled.div`
+const Content = styled.main`
   ${tw`px-6 w-full lg:w-4/5 xl:w-2/3 mx-auto`};
 `
 

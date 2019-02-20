@@ -26,7 +26,6 @@ const Articles = styled.div`
 class PortfolioPage extends React.Component {
   render() {
     const cases = get(this, 'props.data.allContentfulPortfolioEntry.edges')
-    console.log(cases);
     return (
       <Layout>
         <SEO

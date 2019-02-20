@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 import styled from 'react-emotion'
 import logo from "../images/logo-black.svg"
 
-const Container = styled.div`
+const Container = styled.header`
   ${tw``};
 `
 const HeaderBar = styled.div`
