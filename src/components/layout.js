@@ -6,6 +6,8 @@ import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
 import Footer from './footer'
+import PreFooter from './prefooter'
+
 import '../sass/layout.sass'
 
 const Content = styled.div`
@@ -36,6 +38,7 @@ const Layout = ({ children }) => (
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>{children}</Content>
+        <PreFooter />
         <Footer />
       </>
     )}

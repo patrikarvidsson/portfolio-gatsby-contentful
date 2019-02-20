@@ -8,10 +8,10 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 const Wrapper = styled.div`
-  ${tw`w-full lg:w-3/4 xl:w-1/2 mt-12 md:mt-24 flex items-center mx-auto`};
+  ${tw`w-full lg:w-3/4 xl:w-2/3 my-12 mx-auto`};
 `
-const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl text-black`};
+const Title = styled.h2`
+  ${tw`text-black font-normal`};
 `
 const Body = styled.div`
   ${tw`text-lg`};
@@ -28,10 +28,8 @@ class AboutPage extends React.Component {
           keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
         />
         <Wrapper>
-          <div>
-            <Title>{aboutHeadline.node.headline}</Title>
-            <Body dangerouslySetInnerHTML={{__html: aboutBody.node.childMarkdownRemark.html}} />
-          </div>
+          <Title>{aboutHeadline.node.headline}</Title>
+          <Body dangerouslySetInnerHTML={{__html: aboutBody.node.childMarkdownRemark.html}} />
         </Wrapper>
       </Layout>
     )
