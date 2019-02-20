@@ -59,7 +59,7 @@ const PreviewCase = ({ entry }) => {
         </TextWrapper>
         <ImageWrapper className="imageWrapper">
           {inView === true &&
-           <ImageWrapperInner color={entry.clientColor} delay={0.4}>
+           <ImageWrapperInner color={entry.clientColor} delay={0.4} duration={0.7}>
              <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
            </ImageWrapperInner>
           }
