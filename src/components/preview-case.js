@@ -48,8 +48,8 @@ const PreviewCase = ({ entry }) => (
       </Description>
       <PublishDate>{entry.publishDate}</PublishDate>
     </TextWrapper>
-    <ImageWrapper className="imageWrapper">
-      <ImageWrapperInner>
+  <ImageWrapper className="imageWrapper">
+      <ImageWrapperInner color={entry.clientColor}>
         <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
       </ImageWrapperInner>
       <ImageBackground>
