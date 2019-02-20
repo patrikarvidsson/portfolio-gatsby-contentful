@@ -7,7 +7,7 @@ const Container = styled.div`
   ${tw``};
 `
 const HeaderBar = styled.div`
-  ${tw`pt-6 md:pt-8 lg:pt-16 px-6 md:px-6 lg:px-24 flex items-center justify-between w-full`};
+  ${tw`pt-6 md:pt-12 px-6 md:px-6 lg:px-20 flex items-center justify-between w-full`};
 `
 const LogoLink = styled(Link)`
   ${tw`no-underline text-inherit shadow-none hover:bg-transparent`};

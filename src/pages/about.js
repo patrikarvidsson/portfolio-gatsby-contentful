@@ -8,10 +8,10 @@ import SEO from '../components/seo'
 import Layout from '../components/layout'
 
 const Wrapper = styled.div`
-  ${tw`w-full lg:w-3/4 xl:w-2/3 my-12 mx-auto`};
+  ${tw`w-full lg:w-3/4 xl:w-2/3 py-10 lg:py-20 mx-auto`};
 `
 const Title = styled.h2`
-  ${tw`text-black font-normal`};
+  ${tw`text-black font-normal text-4xl md:text-5xl`};
 `
 const Body = styled.div`
   ${tw`text-lg`};

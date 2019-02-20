@@ -6,7 +6,7 @@ import BlockRevealAnimation from 'react-block-reveal-animation';
 import { useInView } from 'react-intersection-observer'
 
 const Container = styled.div`
-  ${tw`w-full flex flex-grow flex-wrap md:flex-no-wrap items-center mb-12`};
+  ${tw`w-full flex flex-grow flex-wrap md:flex-no-wrap items-center mb-12 md:mb-20`};
 `
 
 const TextWrapper = styled.div`
@@ -49,8 +49,8 @@ const PreviewCase = ({ entry }) => {
   })
 
   return (
-    <Container className="caseContainer" >
-      <ImageWrapper className="imageWrapper" >
+    <Container className="caseContainer">
+      <ImageWrapper className="imageWrapper">
         <div ref={ref}>
           {inView === true ?
            <ImageWrapperInner color={entry.clientColor} delay={0} duration={0.6}>

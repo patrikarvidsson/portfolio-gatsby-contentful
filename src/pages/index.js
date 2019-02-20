@@ -10,7 +10,7 @@ import PreviewArticle from '../components/preview-article'
 import PreviewCase from '../components/preview-case'
 
 const Hero = styled.div`
-  ${tw`w-full md:max-w-md my-8 md:mt-12 md:mb-20 lg:mt-24 lg:mb-32 lg:ml-20 flex items-center`};
+  ${tw`w-full md:max-w-md md:h-screen-60 flex items-center my-10 md:my-0`};
 `
 const Hello = styled.div`
   ${tw`text-4xl md:text-5xl font-sans text-black font-bold`};

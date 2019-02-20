@@ -11,7 +11,7 @@ import PreFooter from './prefooter'
 import '../sass/layout.sass'
 
 const Content = styled.div`
-  ${tw`px-6 py-0 md:py-8 w-full lg:w-4/5 xl:w-2/3 mx-auto`};
+  ${tw`px-6 w-full lg:w-4/5 xl:w-2/3 mx-auto`};
 `
 
 const Layout = ({ children }) => (
@@ -37,7 +37,9 @@ const Layout = ({ children }) => (
           <html lang="en" />
         </Helmet>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <Content>{children}</Content>
+        <Content>
+          {children}
+        </Content>
         <PreFooter />
         <Footer />
       </>
