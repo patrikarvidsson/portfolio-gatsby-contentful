@@ -25,7 +25,7 @@ const Section = styled.section`
   ${tw``};
 `
 const SectionTitle = styled.h2`
-  ${tw`text-bold font-sans font-black tracking-wide text-sm uppercase`};
+  ${tw`text-bold font-sans font-bold tracking-wide text-sm uppercase`};
 `
 const Articles = styled.div`
   ${tw`flex flex-wrap my-4 font-sans text-base text-grey`};

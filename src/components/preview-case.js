@@ -58,7 +58,6 @@ const PreviewCase = ({ entry }) => {
           <PublishDate>{entry.publishDate}</PublishDate>
         </TextWrapper>
         <ImageWrapper className="imageWrapper">
-
           {inView === true &&
            <ImageWrapperInner color={entry.clientColor} delay={0.4}>
              <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
