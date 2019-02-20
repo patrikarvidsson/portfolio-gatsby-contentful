@@ -32,6 +32,10 @@ module.exports = {
     }
   },
   plugins: [
+    {
+      resolve: `gatsby-source-contentful`,
+      options: contentfulConfig,
+    },
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
@@ -120,11 +124,6 @@ module.exports = {
         siteUrl: `https://patrikarvidsson.com`,
       },
     },
-    `gatsby-plugin-offline`,
-    {
-      resolve: `gatsby-source-contentful`,
-      options: contentfulConfig,
-    },
     //{
     //  resolve: `gatsby-plugin-hotjar`,
     //  options: {
@@ -150,5 +149,6 @@ module.exports = {
         generateMatchPathRewrites: true, // boolean to turn off automatic creation of redirect rules for client only paths
       },
     },
+    `gatsby-plugin-remove-serviceworker`,
   ],
 }

@@ -13,7 +13,7 @@ const Hero = styled.div`
   ${tw`w-full md:max-w-md my-8 md:mt-12 md:mb-20 lg:mt-24 lg:mb-32 lg:ml-20 flex items-center`};
 `
 const Hello = styled.div`
-  ${tw`text-4xl md:text-5xl font-sans text-black font-black`};
+  ${tw`text-4xl md:text-5xl font-sans text-black font-bold`};
 `
 const Title = styled.h1`
   ${tw`text-3xl md:text-4xl text-black font-normal my-4 md:my-8`};
