@@ -1,4 +1,8 @@
-# Gatsby Tailwind Emotion Starter
+# Patrik Arvidsson
+
+Personal portfolio of patrikarvidsson.com. Based on https://github.com/muhajirframe/gatsby-tailwind-emotion-starter.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/6a92f50e-c237-4bf7-ad9d-a5ff0db0835d/deploy-status)](https://app.netlify.com/sites/patrik/deploys)
 
 ## Getting Started
 
