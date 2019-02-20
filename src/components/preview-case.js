@@ -28,6 +28,9 @@ const ImageWrapper = styled.div`
 const ImageWrapperInner = styled(BlockRevealAnimation)`
   ${tw`lg:w-3/4 xl:w-2/3 mx-auto block z-20`};
 `
+const ImageWrapperInnerPreload = styled.div`
+  ${tw`lg:w-3/4 xl:w-2/3 mx-auto block opacity-0`};
+`
 const ImageBackground = styled.div`
   ${tw`h-full w-full block absolute pin-t z-10 py-10`};
 `
@@ -41,33 +44,37 @@ const Image = styled(Img)`
 const PreviewCase = ({ entry }) => {
   const [ref, inView] = useInView({
     /* Optional options */
-    threshold: 0.2,
+    threshold: 0.35,
     triggerOnce: true,
   })
 
   return (
-
-    <div className="caseContainer" ref={ref}>
-        <TextWrapper className="textWrapper">
-          <Title>
-            <Link className="leading-normal py-0" to={`/portfolio/${entry.slug}`}>{entry.clientName}</Link>
-          </Title>
-          <Description>
-            {entry.description}
-          </Description>
-          <PublishDate>{entry.publishDate}</PublishDate>
-        </TextWrapper>
-        <ImageWrapper className="imageWrapper">
-          {inView === true &&
-           <ImageWrapperInner color={entry.clientColor} delay={0.4} duration={0.7}>
+    <Container className="caseContainer" >
+      <ImageWrapper className="imageWrapper" >
+        <div ref={ref}>
+          {inView === true ?
+           <ImageWrapperInner color={entry.clientColor} delay={0} duration={0.6}>
              <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
-           </ImageWrapperInner>
+           </ImageWrapperInner> :
+           <ImageWrapperInnerPreload>
+             <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
+           </ImageWrapperInnerPreload>
           }
-          <ImageBackground>
-            <ImageBackgroundInner />
-          </ImageBackground>
-        </ImageWrapper>
-    </div>
+        </div>
+        <ImageBackground>
+          <ImageBackgroundInner />
+        </ImageBackground>
+      </ImageWrapper>
+      <TextWrapper className="textWrapper">
+        <Title>
+          <Link className="leading-normal py-0" to={`/portfolio/${entry.slug}`}>{entry.clientName}</Link>
+        </Title>
+        <Description>
+          {entry.description}
+        </Description>
+        <PublishDate>{entry.publishDate}</PublishDate>
+      </TextWrapper>
+    </Container>
   )
 }
 

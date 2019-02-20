@@ -6,7 +6,6 @@ const typography = new Typography({
   scaleRatio: 4,
   headerFontFamily: [
     "arno-pro-display",
-    "Georgia",
     "serif",
   ],
   headerGray: 0,

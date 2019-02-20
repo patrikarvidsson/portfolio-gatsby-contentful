@@ -25,7 +25,7 @@ const NavItem = styled.li`
   ${tw`ml-4 md:ml-6 inline-block no-underline`};
 `
 const NavItemLink = styled(Link)`
-  ${tw`no-underline font-sans font-bold text-black hover:text-blue shadow-none`};
+  ${tw`no-underline font-bold text-black hover:text-blue shadow-none`};
 `
 
 const Header = ({ siteTitle }) => (
@@ -37,9 +37,9 @@ const Header = ({ siteTitle }) => (
 
       <Nav>
         <NavList>
-          <NavItem> <NavItemLink to="/portfolio/">Work</NavItemLink></NavItem>
-          <NavItem> <NavItemLink to="/journal/">Journal</NavItemLink></NavItem>
-          <NavItem> <NavItemLink to="/about/">About</NavItemLink></NavItem>
+          <NavItem><NavItemLink to="/portfolio/">Portfolio</NavItemLink></NavItem>
+          <NavItem><NavItemLink to="/journal/">Journal</NavItemLink></NavItem>
+          <NavItem><NavItemLink to="/about/">About</NavItemLink></NavItem>
         </NavList>
       </Nav>
     </HeaderBar>
