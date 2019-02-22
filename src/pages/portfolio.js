@@ -57,7 +57,7 @@ export default PortfolioPage
 
 export const pageQuery = graphql`
   query PortfolioQuery {
-    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 6) {
+    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 999) {
       edges {
         node {
           title

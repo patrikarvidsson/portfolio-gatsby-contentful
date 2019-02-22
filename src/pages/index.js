@@ -108,7 +108,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 6) {
+    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 6, filter: { promoteCase: {ne: false}}) {
       edges {
         node {
           title
@@ -117,7 +117,7 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 550, maxHeight: 360, resizingBehavior: FILL) {
+            fluid(maxWidth: 1200, maxHeight: 875, resizingBehavior: FILL) {
              ...GatsbyContentfulFluid_tracedSVG
             }
           }

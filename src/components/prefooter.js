@@ -37,7 +37,7 @@ const PreFooter = () => (
         <ItemTitle>Patrik Arvidsson</ItemTitle>
         <Item>UI/UX designer</Item>
         <Item>+46 734 15 60 10</Item>
-        <Item>hello@patrikarvidsson.com</Item>
+        <Item><a alt="Send me an e-mail" title="Send me an e-mail" href="mailto:hello@patrikarvidsson.com">hello@patrikarvidsson.com</a></Item>
       </Row>
       <Row>
         <ItemTitle>Patrik Arvidsson AB</ItemTitle>
@@ -49,7 +49,7 @@ const PreFooter = () => (
         <ItemTitle>Social media</ItemTitle>
         <Item><a alt="Facebook" title="Facebook" href="https://facebook.com/patrikarvidsson">facebook.com/patrikarvidsson</a></Item>
         <Item><a alt="Twitter" title="Twitter" href="https://twitter.com/patrikarvidsson">twitter.com/patrikarvidsson</a></Item>
-        <Item><a alt="Instagram" title="Instagram" href="https://instagram.com/arvds">instagram.com/arvdsn</a></Item>
+        <Item><a alt="Instagram" title="Instagram" href="https://instagram.com/arvdsn">instagram.com/arvdsn</a></Item>
         <Item><a alt="LinkedIn" title="LinkedIn" href="https://linkedin.com/in/patrikarvidsson">linkedin.com/in/patrikarvidsson</a></Item>
       </Row>
     </Inner>
