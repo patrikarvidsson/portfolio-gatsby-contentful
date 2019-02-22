@@ -18,6 +18,9 @@ const Title = styled.h3`
 const Description = styled.p`
   ${tw`text-base my-3`};
 `
+const Tags = styled.div`
+  ${tw`text-sm font-sans font-semibold tracking-wide uppercase`};
+`
 
 const ImageWrapper = styled.div`
   ${tw`w-full md:w-3/5 block relative`};
@@ -69,6 +72,14 @@ const PreviewCase = ({ entry }) => {
         <Description>
           {entry.description}
         </Description>
+        <Tags>
+          {entry.tags.map(tag => (
+            <span className="mb-0" key={tag}>
+              {tag}
+            </span>
+          ))}
+          {entry.concept === true && <Concept>&nbsp;·&nbsp;Concept</Concept>}
+        </Tags>
       </TextWrapper>
     </Container>
   )
