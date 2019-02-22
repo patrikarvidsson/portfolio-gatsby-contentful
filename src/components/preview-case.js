@@ -18,9 +18,6 @@ const Title = styled.h3`
 const Description = styled.p`
   ${tw`text-base my-3`};
 `
-const PublishDate = styled.p`
-  ${tw`text-black my-3`};
-`
 
 const ImageWrapper = styled.div`
   ${tw`w-full md:w-3/5 block relative`};
@@ -72,7 +69,6 @@ const PreviewCase = ({ entry }) => {
         <Description>
           {entry.description}
         </Description>
-        <PublishDate>{entry.publishDate}</PublishDate>
       </TextWrapper>
     </Container>
   )
