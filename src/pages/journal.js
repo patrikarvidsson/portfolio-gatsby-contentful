@@ -27,7 +27,7 @@ class JournalIndex extends React.Component {
     return (
       <Layout>
         <SEO
-          title="Design journal"
+          title="Journal - Patrik Arvidsson"
           description="A collection of articles about design, workflows and other things."
           keywords={[`design`, `blog`, `ui`, `ux`, `gatsby`, `react`]}
         />

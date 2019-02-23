@@ -29,7 +29,7 @@ class PortfolioPage extends React.Component {
     return (
       <Layout>
         <SEO
-          title="Portfolio"
+          title="Portfolio - Patrik Arvidsson"
           description="Clients I've worked with and projects I've been involved in throughout the years."
           keywords={[`design`, `portfolio`, `ui`, `ux`, `case`]}
         />
