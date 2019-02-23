@@ -7,7 +7,7 @@ const Container = styled.div`
   ${tw`w-full md:w-1/2 lg:w-1/3 pr-8 mb-6`};
 `
 const Title = styled.h3`
-  ${tw`leading-normal py-0 my-3 text-2xl`};
+  ${tw`leading-normal font-semibold font-sans py-0 my-2 text-2xl`};
 `
 const Description = styled.p`
   ${tw`my-2 text-base`};

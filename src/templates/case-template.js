@@ -11,7 +11,7 @@ const Article = styled.article`
   ${tw``};
 `
 const Header = styled.section`
-  ${tw`w-full md:w-2/3 mx-auto text-center mb-16`};
+  ${tw`w-full md:w-2/3 mx-auto text-center my-12 md:mb-16`};
 `
 const Tags = styled.div`
   ${tw`text-sm font-sans font-semibold tracking-wide uppercase`};
@@ -20,16 +20,16 @@ const Concept = styled.span`
   ${tw`text-red`};
 `
 const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl text-black my-4`};
+  ${tw`text-4xl md:text-5xl text-black leading-thin font-normal mt-5 mb-3 md:my-4`};
 `
 const PublishDate = styled.div`
-  ${tw``};
+  ${tw`mt-0 md:mt-0`};
 `
 const Image = styled(Img)`
-  ${tw`text-red mt-8 mb-16 rounded`};
+  ${tw`text-red mt-6 mb-8 md:mb-12 rounded`};
 `
 const Content = styled.section`
-  ${tw`md:px-48`};
+  ${tw`w-full lg:w-3/4 xl:w-2/3 lg:mx-auto font-sans`};
 `
 
 class PortfolioEntryTemplate extends React.Component {

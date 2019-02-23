@@ -61,7 +61,7 @@ module.exports = {
               linkImagesToOriginal: false,
               showCaptions: true,
               sizeByPixelDensity: true,
-              wrapperStyle: 'margin-left:-10%!important;min-width:120%;border-radius:0.25rem;',
+              wrapperStyle: '',
             },
           },
         ],

@@ -12,10 +12,10 @@ const Hero = styled.div`
   ${tw`w-full xl:w-3/4 mt-12 mb-10 md:my-24 flex items-center`};
 `
 const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl text-black`};
+  ${tw`text-black font-normal text-4xl md:text-5xl`};
 `
-const Subline = styled.div`
-  ${tw`text-lg md:text-xl`};
+const Subtitle = styled.span`
+  ${tw`text-lg`};
 `
 const Section = styled.section`
   ${tw``};
@@ -36,7 +36,7 @@ class PortfolioPage extends React.Component {
         <Hero>
           <div>
             <Title>Clients I've worked with and projects I've been involved in throughout the years.</Title>
-            <Subline>Design studies and explorations can be found in my <a href="/journal">journal</a>.</Subline>
+            <Subtitle>Design studies and explorations can be found in my <Link to="/journal">journal</Link>.</Subtitle>
           </div>
         </Hero>
         <Section>

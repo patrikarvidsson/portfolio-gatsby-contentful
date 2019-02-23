@@ -4,7 +4,7 @@ import styled from 'react-emotion'
 import logo from "../images/logo-black.svg"
 
 const Container = styled.section`
-  ${tw`container px-6 md:px-0 pt-12 pb-8 md:py-16 bg-grey-lightest text-center lg:text-left mt-8 md:mt-16`};
+  ${tw`container px-6 md:px-0 pt-12 pb-8 md:py-16 bg-grey-lightest text-center lg:text-left mt-12 md:mt-24`};
 `
 const Inner = styled.div`
   ${tw`flex justify-between w-full lg:w-4/5 xl:w-2/3 mx-auto flex-wrap md:flex-no-wrap`};
