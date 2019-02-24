@@ -10,13 +10,13 @@ import PreviewArticle from '../components/preview-article'
 import PreviewCase from '../components/preview-case'
 
 const Hero = styled.div`
-  ${tw`w-full md:max-w-md md:h-screen-60 flex items-center my-10 md:my-0`};
+  ${tw`w-full md:max-w-md xl:max-w-lg md:h-screen-60 flex items-center my-10 md:my-0`};
 `
 const Hello = styled.div`
   ${tw`text-4xl md:text-5xl font-sans text-black font-bold`};
 `
 const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl text-black font-normal my-4 md:my-8`};
+  ${tw`text-3xl md:text-5xl text-black font-normal my-4 md:my-6`};
 `
 const Subline = styled.div`
   ${tw`text-lg md:text-xl w-full md:w-2/3`};
