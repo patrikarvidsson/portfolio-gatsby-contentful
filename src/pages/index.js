@@ -6,14 +6,10 @@ import Layout from '../components/layout'
 import styled from 'react-emotion'
 import SEO from '../components/seo'
 
-import PreviewArticle from '../components/preview-article'
 import PreviewCase from '../components/preview-case'
 
 const Hero = styled.div`
   ${tw`w-full md:max-w-md xl:max-w-lg md:h-screen-60 flex items-center my-10 md:my-0`};
-`
-const Hello = styled.div`
-  ${tw`text-4xl md:text-5xl font-sans text-black font-bold`};
 `
 const Title = styled.h1`
   ${tw`text-3xl md:text-5xl text-black font-normal my-4 md:my-6`};
@@ -23,9 +19,6 @@ const Subline = styled.div`
 `
 const Section = styled.section`
   ${tw``};
-`
-const SectionTitle = styled.h2`
-  ${tw`text-bold font-sans font-bold tracking-wide text-sm uppercase`};
 `
 const Articles = styled.div`
   ${tw`flex flex-wrap my-4 lg:-mx-16 font-sans text-base text-grey`};

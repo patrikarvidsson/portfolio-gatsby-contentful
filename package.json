@@ -37,7 +37,7 @@
     "react-dom": "^16.8.2",
     "react-emotion": "^9.2.12",
     "react-helmet": "^5.2.0",
-    "react-intersection-observer": "^8.0.5",
+    "react-intersection-observer": "^8.10.0",
     "react-typography": "^0.16.18",
     "sharp": "^0.21.3",
     "tailwindcss": "^0.6.6",
