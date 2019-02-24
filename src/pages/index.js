@@ -16,7 +16,7 @@ const Hello = styled.div`
   ${tw`text-4xl md:text-5xl font-sans text-black font-bold`};
 `
 const Title = styled.h1`
-  ${tw`text-3xl md:text-4xl text-black font-normal my-4 md:my-8`};
+  ${tw`text-3xl md:text-5xl text-black font-normal my-4 md:my-8`};
 `
 const Subline = styled.div`
   ${tw`text-lg md:text-xl w-full md:w-2/3`};
@@ -45,7 +45,6 @@ class IndexPage extends React.Component {
         />
         <Hero>
           <div>
-            <Hello>Hello,</Hello>
             <Title
             dangerouslySetInnerHTML={{
               __html: siteSettings.node.headline.childMarkdownRemark.html,
