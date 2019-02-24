@@ -28,7 +28,7 @@ const SectionTitle = styled.h2`
   ${tw`text-bold font-sans font-bold tracking-wide text-sm uppercase`};
 `
 const Articles = styled.div`
-  ${tw`flex flex-wrap my-4 font-sans text-base text-grey`};
+  ${tw`flex flex-wrap my-4 lg:-mx-16 font-sans text-base text-grey`};
 `
 
 class IndexPage extends React.Component {

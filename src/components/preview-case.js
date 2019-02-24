@@ -10,23 +10,23 @@ const Container = styled.div`
 `
 
 const TextWrapper = styled.div`
-  ${tw`w-full md:w-2/5 lg:px-12`};
+  ${tw`w-full md:w-2/5 md:mx-6 xl:px-12`};
 `
 const Title = styled.h3`
-  ${tw`leading-normal font-sans font-bold py-0 my-3 text-2xl lg:text-3xl`};
+  ${tw`leading-normal font-sans font-bold py-0 mb-2 text-2xl`};
 `
 const Description = styled.p`
-  ${tw`text-base my-3`};
+  ${tw`text-base mt-2 mb-3`};
 `
 const Tags = styled.div`
-  ${tw`text-sm font-sans font-semibold tracking-wide uppercase`};
+  ${tw`text-sm text-red font-sans font-semibold tracking-wide uppercase`};
 `
 
 const ImageWrapper = styled.div`
-  ${tw`w-full md:w-3/5 block relative`};
+  ${tw`w-full md:w-3/5 block relative lg:mx-6`};
 `
 const ImageWrapperInner = styled(BlockRevealAnimation)`
-  ${tw`lg:w-3/4 xl:w-2/3 mx-auto block z-20`};
+  ${tw`lg:w-4/5 xl:w-3/4 mx-auto block z-20`};
 `
 const ImageWrapperInnerPreload = styled.div`
   ${tw`lg:w-3/4 xl:w-2/3 mx-auto block opacity-0`};
