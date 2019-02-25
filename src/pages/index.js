@@ -12,7 +12,7 @@ const Hero = styled.div`
   ${tw`w-full md:max-w-md xl:max-w-lg md:h-screen-60 flex items-center my-10 md:my-0`};
 `
 const Title = styled.h1`
-  ${tw`text-3xl md:text-5xl text-black font-normal my-4 md:my-6`};
+  ${tw`text-4xl md:text-5xl text-black font-normal my-4 md:my-6`};
 `
 const Subline = styled.div`
   ${tw`text-lg md:text-xl w-full md:w-2/3`};
@@ -21,7 +21,7 @@ const Section = styled.section`
   ${tw``};
 `
 const Articles = styled.div`
-  ${tw`flex flex-wrap my-4 lg:-mx-16 font-sans text-base text-grey`};
+  ${tw`flex flex-wrap my-4 font-sans text-base text-grey`};
 `
 
 class IndexPage extends React.Component {
