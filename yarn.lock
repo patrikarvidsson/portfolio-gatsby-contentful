@@ -6479,6 +6479,11 @@ internal-ip@^3.0.1:
     default-gateway "^2.6.0"
     ipaddr.js "^1.5.2"
 
+intersection-observer@^0.5.1:
+  version "0.5.1"
+  resolved "https://registry.yarnpkg.com/intersection-observer/-/intersection-observer-0.5.1.tgz#e340fc56ce74290fe2b2394d1ce88c4353ac6dfa"
+  integrity sha512-Zd7Plneq82kiXFixs7bX62YnuZ0BMRci9br7io88LwDyF3V43cQMI+G5IiTlTNTt+LsDUppl19J/M2Fp9UkH6g==
+
 into-stream@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/into-stream/-/into-stream-3.1.0.tgz#96fb0a936c12babd6ff1752a17d05616abd094c6"
@@ -10013,10 +10018,10 @@ react-hot-loader@^4.6.2:
     shallowequal "^1.0.2"
     source-map "^0.7.3"
 
-react-intersection-observer@^8.0.5:
-  version "8.0.5"
-  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.0.5.tgz#e6d73c890c6e201178c7216d9af5bccd9e5c68f5"
-  integrity sha512-s6U4p/AUOsit6JabQ3nAjCiv6+0bRc/IkS2DNjcUk14GvZH8eVyBj5zUv5PRiQ+mu/HqmKLCNJ1WBdXmCEi3fA==
+react-intersection-observer@^8.10.0:
+  version "8.20.2"
+  resolved "https://registry.yarnpkg.com/react-intersection-observer/-/react-intersection-observer-8.20.2.tgz#160506f6a74ff39c396dfbf0d1c4ea47520d7a7a"
+  integrity sha512-md7MOxymMQgujJJH9m4rYrGgYQYcsAR40kcuMXKNXUOOe7B2zqByXSGZ5MZe0DqSl7oCxjlV1IyMJwg7pIPn2w==
   dependencies:
     "@babel/runtime" "^7.0.0"
     invariant "^2.0.0"
