@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import get from 'lodash/get'
 import styled from '@emotion/styled'
 import { css } from 'emotion'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
