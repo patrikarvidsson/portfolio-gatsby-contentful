@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import get from 'lodash/get'
 import styled from '@emotion/styled'
 import { css } from 'emotion'
-import SEO from '../components/seo'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 import SmallCase from '../components/case-small'
 
@@ -66,11 +65,6 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
-          heroImage {
-            fluid(maxWidth: 800, maxHeight: 560, resizingBehavior: FILL) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
         description
         }
       }

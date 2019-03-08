@@ -1,11 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import { css } from 'emotion'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
-import SEO from '../components/seo'
 
+import SEO from '../components/seo'
 import Layout from '../components/layout'
 import SmallPost from '../components/article-preview'
 
