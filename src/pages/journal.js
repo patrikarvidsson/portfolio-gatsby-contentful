@@ -53,7 +53,7 @@ export default JournalIndex
 
 export const pageQuery = graphql`
   query JournalQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 6) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: [DESC] }, limit: 6) {
       edges {
         node {
           title
