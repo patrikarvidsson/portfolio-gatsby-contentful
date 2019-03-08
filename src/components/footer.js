@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 
 const Container = styled.footer`
   ${tw`px-6 md:px-0 py-8 md:py-8 bg-white text-center`};

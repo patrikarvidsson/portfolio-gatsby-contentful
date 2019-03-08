@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 
 const Container = styled.div`
   ${tw`w-full md:w-1/2 lg:w-1/3 pr-8 mb-6`};
