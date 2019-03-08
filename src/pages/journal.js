@@ -2,7 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import { css } from 'emotion'
 import get from 'lodash/get'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
