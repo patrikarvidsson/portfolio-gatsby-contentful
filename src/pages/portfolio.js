@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 
 import Layout from '../components/layout'
-import SmallCase from '../components/small-case'
+import SmallCase from '../components/case-small'
 
 const Hero = styled.div`
   ${tw`w-full xl:w-3/4 mt-12 mb-10 md:my-24 flex items-center`};

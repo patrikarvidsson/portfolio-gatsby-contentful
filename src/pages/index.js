@@ -6,7 +6,7 @@ import Layout from '../components/layout'
 import styled from 'react-emotion'
 import SEO from '../components/seo'
 
-import PreviewCase from '../components/preview-case'
+import PreviewCase from '../components/case-preview'
 
 const Hero = styled.div`
   ${tw`w-full md:max-w-md xl:max-w-lg md:h-screen-60 flex items-center my-10 md:my-0`};

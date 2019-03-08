@@ -6,7 +6,7 @@ import { graphql } from 'gatsby'
 import SEO from '../components/seo'
 
 import Layout from '../components/layout'
-import SmallPost from '../components/preview-article'
+import SmallPost from '../components/article-preview'
 
 const Wrapper = styled.div`
   ${tw`w-full lg:w-3/4 xl:w-2/3 py-10 lg:py-20 mx-auto`};
