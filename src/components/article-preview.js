@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
 
 const Container = styled.article`
   ${tw`w-full py-4 border-t-0 border-l-0 border-r-0 border-b border-solid border-grey-light flex items-center flex-wrap`};
@@ -35,13 +34,15 @@ const PreviewArticle = ({ article }) => (
       <Title>
         <Anchor to={`/journal/${article.slug}`}>{article.title}</Anchor>
       </Title>
-      <Description>
-        {article.description}
-      </Description>
+      <Description>{article.description}</Description>
       <PublishDate>{article.publishDate}</PublishDate>
     </TextWrapper>
     <ImageWrapper>
-      <Image alt={article.title} title={article.title} fluid={article.heroImage.fluid} />
+      <Image
+        alt={article.title}
+        title={article.title}
+        fluid={article.heroImage.fluid}
+      />
     </ImageWrapper>
   </Container>
 )

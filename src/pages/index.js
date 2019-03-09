@@ -1,8 +1,7 @@
 import React from 'react'
 import get from 'lodash/get'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -40,23 +39,21 @@ class IndexPage extends React.Component {
         <Hero>
           <div>
             <Title
-            dangerouslySetInnerHTML={{
-              __html: siteSettings.node.headline.childMarkdownRemark.html,
-            }}
+              dangerouslySetInnerHTML={{
+                __html: siteSettings.node.headline.childMarkdownRemark.html,
+              }}
             />
             <Subline
-            dangerouslySetInnerHTML={{
-              __html: siteSettings.node.subline.childMarkdownRemark.html,
-            }}
+              dangerouslySetInnerHTML={{
+                __html: siteSettings.node.subline.childMarkdownRemark.html,
+              }}
             />
           </div>
         </Hero>
         <Section id="latestWork">
           <Articles>
             {cases.map(({ node }) => {
-              return (
-                <PreviewCase entry={node} key={node.slug} />
-              )
+              return <PreviewCase entry={node} key={node.slug} />
             })}
           </Articles>
         </Section>
@@ -74,7 +71,11 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 6, filter: { promoteCase: {ne: false}}) {
+    allContentfulPortfolioEntry(
+      sort: { fields: [publishDate], order: DESC }
+      limit: 6
+      filter: { promoteCase: { ne: false } }
+    ) {
       edges {
         node {
           title
@@ -84,7 +85,7 @@ export const pageQuery = graphql`
           tags
           heroImage {
             fluid(maxWidth: 1200, maxHeight: 875, resizingBehavior: FILL) {
-             ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
           clientColor
@@ -92,7 +93,9 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulSettings(filter: { contentful_id: { eq: "4YFMbGrvKsFO9xnO8KUzFz" } }) {
+    allContentfulSettings(
+      filter: { contentful_id: { eq: "4YFMbGrvKsFO9xnO8KUzFz" } }
+    ) {
       edges {
         node {
           headline {

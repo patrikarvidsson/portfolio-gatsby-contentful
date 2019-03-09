@@ -2,8 +2,7 @@ import React, { useRef } from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
-import BlockRevealAnimation from 'react-block-reveal-animation';
+import BlockRevealAnimation from 'react-block-reveal-animation'
 import { useInView } from 'react-intersection-observer'
 
 const Container = styled.div`
@@ -53,14 +52,27 @@ const PreviewCase = ({ entry }) => {
     <Container className="caseContainer">
       <ImageWrapper className="imageWrapper">
         <div ref={ref}>
-          {inView === true ?
-           <ImageWrapperInner color={entry.clientColor} delay={0} duration={0.6}>
-             <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
-           </ImageWrapperInner> :
-           <ImageWrapperInnerPreload>
-             <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
-           </ImageWrapperInnerPreload>
-          }
+          {inView === true ? (
+            <ImageWrapperInner
+              color={entry.clientColor}
+              delay={0}
+              duration={0.6}
+            >
+              <Image
+                alt={entry.title}
+                title={entry.title}
+                fluid={entry.heroImage.fluid}
+              />
+            </ImageWrapperInner>
+          ) : (
+            <ImageWrapperInnerPreload>
+              <Image
+                alt={entry.title}
+                title={entry.title}
+                fluid={entry.heroImage.fluid}
+              />
+            </ImageWrapperInnerPreload>
+          )}
         </div>
         <ImageBackground>
           <ImageBackgroundInner />
@@ -68,11 +80,11 @@ const PreviewCase = ({ entry }) => {
       </ImageWrapper>
       <TextWrapper className="textWrapper">
         <Title>
-          <Link className="leading-normal py-0" to={`/portfolio/${entry.slug}`}>{entry.clientName}</Link>
+          <Link className="leading-normal py-0" to={`/portfolio/${entry.slug}`}>
+            {entry.clientName}
+          </Link>
         </Title>
-        <Description>
-          {entry.description}
-        </Description>
+        <Description>{entry.description}</Description>
         <Tags>
           {entry.tags.map(tag => (
             <span className="mb-0" key={tag}>

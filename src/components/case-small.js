@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import Img from 'gatsby-image'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
 
 const Container = styled.div`
   ${tw`w-full md:w-1/2 lg:w-1/3 pr-8 mb-6`};
@@ -18,15 +16,15 @@ const Tags = styled.p`
 `
 
 const SmallCase = ({ entry }) => (
-    <Container>
-      <Title>
-        <Link className="leading-normal py-0" to={`/portfolio/${entry.slug}`}>{entry.clientName}</Link>
-      </Title>
-      <Description>
-        {entry.description}
-      </Description>
-      <Tags>{entry.tags}</Tags>
-    </Container>
+  <Container>
+    <Title>
+      <Link className="leading-normal py-0" to={`/portfolio/${entry.slug}`}>
+        {entry.clientName}
+      </Link>
+    </Title>
+    <Description>{entry.description}</Description>
+    <Tags>{entry.tags}</Tags>
+  </Container>
 )
 
 export default SmallCase

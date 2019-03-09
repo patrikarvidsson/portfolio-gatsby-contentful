@@ -1,8 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
-import logo from "../images/logo-black.svg"
+import logo from '../images/logo-black.svg'
 
 const Container = styled.header`
   ${tw``};
@@ -38,9 +37,15 @@ const Header = ({ siteTitle }) => (
 
       <Nav>
         <NavList>
-          <NavItem><NavItemLink to="/portfolio/">Portfolio</NavItemLink></NavItem>
-          <NavItem><NavItemLink to="/journal/">Journal</NavItemLink></NavItem>
-          <NavItem><NavItemLink to="/about/">About</NavItemLink></NavItem>
+          <NavItem>
+            <NavItemLink to="/portfolio/">Portfolio</NavItemLink>
+          </NavItem>
+          <NavItem>
+            <NavItemLink to="/journal/">Journal</NavItemLink>
+          </NavItem>
+          <NavItem>
+            <NavItemLink to="/about/">About</NavItemLink>
+          </NavItem>
         </NavList>
       </Nav>
     </HeaderBar>

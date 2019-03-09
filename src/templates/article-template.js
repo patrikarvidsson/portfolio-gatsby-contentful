@@ -1,11 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
-import Layout from '../components/layout'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
+import Layout from '../components/layout'
 import SEO from '../components/seo'
 
 const Article = styled.article`
@@ -39,7 +37,12 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout>
-        <SEO title={post.title} description={post.description} image={post.heroImage.fluid} pathname={this.props.location.pathname} />
+        <SEO
+          title={post.title}
+          description={post.description}
+          image={post.heroImage.fluid}
+          pathname={this.props.location.pathname}
+        />
         <Article id="main">
           <Header>
             <Tags>
@@ -54,8 +57,13 @@ class BlogPostTemplate extends React.Component {
             <Title>{post.title}</Title>
             <PublishDate>{post.publishDate}</PublishDate>
           </Header>
-          <Image alt={post.title} title={post.title} fluid={post.heroImage.fluid} />
-          <Content className="content"
+          <Image
+            alt={post.title}
+            title={post.title}
+            fluid={post.heroImage.fluid}
+          />
+          <Content
+            className="content"
             dangerouslySetInnerHTML={{
               __html: post.body.childMarkdownRemark.html,
             }}
@@ -83,7 +91,7 @@ export const pageQuery = graphql`
       tags
       heroImage {
         fluid(maxWidth: 1600, resizingBehavior: SCALE) {
-         ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
       metaImage {

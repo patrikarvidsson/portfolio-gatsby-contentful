@@ -28,7 +28,7 @@ exports.createPages = ({ graphql, actions }) => {
               }
             }
           }
-          `
+        `
       ).then(result => {
         if (result.errors) {
           console.log(result.errors)
@@ -41,7 +41,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/journal/${post.node.slug}/`,
             component: blogPost,
             context: {
-              slug: post.node.slug
+              slug: post.node.slug,
             },
           })
         })
@@ -52,7 +52,7 @@ exports.createPages = ({ graphql, actions }) => {
             path: `/portfolio/${entry.node.slug}/`,
             component: portfolioEntry,
             context: {
-              slug: entry.node.slug
+              slug: entry.node.slug,
             },
           })
         })

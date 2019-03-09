@@ -8,7 +8,8 @@ try {
 // Overwrite the Contentful config with environment variables if they exist
 contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
-  accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
+  accessToken:
+    process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
 }
 
 const { spaceId, accessToken } = contentfulConfig
@@ -19,17 +20,19 @@ if (!spaceId || !accessToken) {
   )
 }
 
-const siteUrl = process.env.URL || process.env.DEPLOY_URL || `https://patrikarvidsson.com`
+const siteUrl =
+  process.env.URL || process.env.DEPLOY_URL || `https://patrikarvidsson.com`
 
 module.exports = {
   siteMetadata: {
     title: 'Patrik Arvidsson',
     author: 'Patrik Arvidsson',
-    description: 'Interdisciplinary designer living in Gothenburg, Sweden. I help clients reimagine, prototype and design solutions for human interaction problems.',
+    description:
+      'Interdisciplinary designer living in Gothenburg, Sweden. I help clients reimagine, prototype and design solutions for human interaction problems.',
     siteUrl,
     social: {
       twitter: 'patrikarvidsson',
-    }
+    },
   },
   plugins: [
     {
@@ -96,7 +99,7 @@ module.exports = {
         // Exclude specific pages or groups of pages using glob parameters
         // See: https://github.com/isaacs/minimatch
         // The example below will exclude the single `path/to/page` and all routes beginning with `category`
-        exclude: ["/category/*", `/tag/*`],
+        exclude: ['/category/*', `/tag/*`],
         query: `
         {
           site {
@@ -112,13 +115,13 @@ module.exports = {
               }
             }
           }
-        }`
-      }
+        }`,
+      },
     },
     {
       resolve: `gatsby-plugin-google-tagmanager`,
       options: {
-        id: "GTM-56CKRTV",
+        id: 'GTM-56CKRTV',
 
         // Include GTM in development.
         // Defaults to false meaning GTM will only be loaded in production.
@@ -142,12 +145,8 @@ module.exports = {
       resolve: `gatsby-plugin-netlify`,
       options: {
         headers: {
-          "/*.css": [
-            "Cache-Control: public, max-age=31536000, immutable",
-          ],
-          "/*.js": [
-            "Cache-Control: public, max-age=31536000, immutable",
-          ]
+          '/*.css': ['Cache-Control: public, max-age=31536000, immutable'],
+          '/*.js': ['Cache-Control: public, max-age=31536000, immutable'],
         }, // option to add more headers. `Link` headers are transformed by the below criteria
         allPageHeaders: [], // option to add headers for all pages. `Link` headers are transformed by the below criteria
         mergeSecurityHeaders: true, // boolean to turn off the default security headers

@@ -49,9 +49,9 @@ Start development server
 yarn develop
 ```
 
-Run prettier
+Run format to prettify code
 ```sh
-yarn prettier
+yarn format
 ```
 
 Build site

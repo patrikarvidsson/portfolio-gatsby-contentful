@@ -1,8 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
 import get from 'lodash/get'
-import { graphql, Link } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -34,13 +33,13 @@ class JournalIndex extends React.Component {
         <Wrapper>
           <header>
             <Title>Journal</Title>
-            <Subtitle>A collection of articles about design, workflows and other things.</Subtitle>
+            <Subtitle>
+              A collection of articles about design, workflows and other things.
+            </Subtitle>
           </header>
           <Body>
             {posts.map(({ node }) => {
-              return (
-                <SmallPost article={node} key={node.slug} />
-              )
+              return <SmallPost article={node} key={node.slug} />
             })}
           </Body>
         </Wrapper>
@@ -53,7 +52,10 @@ export default JournalIndex
 
 export const pageQuery = graphql`
   query JournalQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: [DESC] }, limit: 6) {
+    allContentfulBlogPost(
+      sort: { fields: [publishDate], order: [DESC] }
+      limit: 6
+    ) {
       edges {
         node {
           title
@@ -62,10 +64,10 @@ export const pageQuery = graphql`
           tags
           heroImage {
             fluid(maxWidth: 800, maxHeight: 560, resizingBehavior: FILL) {
-             ...GatsbyContentfulFluid_tracedSVG
+              ...GatsbyContentfulFluid_tracedSVG
             }
           }
-        description
+          description
         }
       }
     }

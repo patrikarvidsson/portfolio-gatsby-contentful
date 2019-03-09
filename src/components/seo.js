@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { Helmet } from "react-helmet"
+import { Helmet } from 'react-helmet'
 
 function SEO({ description, lang, image, meta, keywords, title, pathname }) {
   return (
@@ -18,7 +18,7 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
               lang,
             }}
             title={title}
-            titleTemplate={`%s`}// | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s`} // | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: `description`,
@@ -54,45 +54,49 @@ function SEO({ description, lang, image, meta, keywords, title, pathname }) {
               },
               {
                 name: 'google-site-verification',
-                content: 'QlRmuLQWttdkbKlZ0ZwIBX3xv0M8ouqTW3wE2Eg_jKI'
-              }
+                content: 'QlRmuLQWttdkbKlZ0ZwIBX3xv0M8ouqTW3wE2Eg_jKI',
+              },
             ]
-                  .concat(metaImage ? [
-                    {
-                      property: `og:image`,
-                      content: metaImage
-                    },
-                    {
-                      property: `og:image:alt`,
-                      content: title,
-                    },
-                    {
-                      property: 'og:image:width',
-                      content: image.width
-                    },
-                    {
-                      property: 'og:image:height',
-                      content: image.height
-                    },
-                    {
-                      name: `twitter:card`,
-                      content: `summary_large_image`,
+              .concat(
+                metaImage
+                  ? [
+                      {
+                        property: `og:image`,
+                        content: metaImage,
+                      },
+                      {
+                        property: `og:image:alt`,
+                        content: title,
+                      },
+                      {
+                        property: 'og:image:width',
+                        content: image.width,
+                      },
+                      {
+                        property: 'og:image:height',
+                        content: image.height,
+                      },
+                      {
+                        name: `twitter:card`,
+                        content: `summary_large_image`,
+                      },
+                    ]
+                  : [
+                      {
+                        name: `twitter:card`,
+                        content: `summary`,
+                      },
+                    ]
+              )
+              .concat(
+                keywords.length > 0
+                  ? {
+                      name: `keywords`,
+                      content: keywords.join(`, `),
                     }
-                  ] : [
-                    {
-                      name: `twitter:card`,
-                      content: `summary`,
-                    },
-                  ])
-                  .concat(
-                    keywords.length > 0
-                      ? {
-                        name: `keywords`,
-                        content: keywords.join(`, `),
-                      }
-                    : []
-                  )
-                  .concat(meta)}
+                  : []
+              )
+              .concat(meta)}
           />
         )
       }}
@@ -104,7 +108,7 @@ SEO.defaultProps = {
   lang: `en`,
   meta: [],
   keywords: [],
-  pathname: ``
+  pathname: ``,
 }
 
 SEO.propTypes = {
@@ -114,7 +118,7 @@ SEO.propTypes = {
   meta: PropTypes.array,
   keywords: PropTypes.arrayOf(PropTypes.string),
   pathname: PropTypes.string,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 }
 
 export default SEO

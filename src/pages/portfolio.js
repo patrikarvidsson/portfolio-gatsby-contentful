@@ -1,9 +1,7 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import get from 'lodash/get'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 
 import SEO from '../components/seo'
 import Layout from '../components/layout'
@@ -36,16 +34,20 @@ class PortfolioPage extends React.Component {
         />
         <Hero>
           <div>
-            <Title>Clients I've worked with and projects I've been involved in throughout the years.</Title>
-            <Subtitle>Design studies and explorations can be found in my <Link to="/journal">journal</Link>.</Subtitle>
+            <Title>
+              Clients I've worked with and projects I've been involved in
+              throughout the years.
+            </Title>
+            <Subtitle>
+              Design studies and explorations can be found in my{' '}
+              <Link to="/journal">journal</Link>.
+            </Subtitle>
           </div>
         </Hero>
         <Section>
           <Articles>
             {cases.map(({ node }) => {
-              return (
-                <SmallCase entry={node} key={node.slug} />
-              )
+              return <SmallCase entry={node} key={node.slug} />
             })}
           </Articles>
         </Section>
@@ -58,7 +60,10 @@ export default PortfolioPage
 
 export const pageQuery = graphql`
   query PortfolioQuery {
-    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: [DESC] }, limit: 20) {
+    allContentfulPortfolioEntry(
+      sort: { fields: [publishDate], order: [DESC] }
+      limit: 20
+    ) {
       edges {
         node {
           title
@@ -66,7 +71,7 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
-        description
+          description
         }
       }
     }

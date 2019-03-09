@@ -1,7 +1,5 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
 import get from 'lodash/get'
 import { graphql } from 'gatsby'
 import SEO from '../components/seo'
@@ -20,7 +18,10 @@ const Body = styled.div`
 class AboutPage extends React.Component {
   render() {
     const [aboutHeadline] = get(this, 'props.data.allContentfulAbout.edges')
-    const [aboutBody] = get(this, 'props.data.allContentfulAboutBodyTextNode.edges')
+    const [aboutBody] = get(
+      this,
+      'props.data.allContentfulAboutBodyTextNode.edges'
+    )
     return (
       <Layout>
         <SEO
@@ -30,7 +31,11 @@ class AboutPage extends React.Component {
         />
         <Wrapper>
           <Title>{aboutHeadline.node.headline}</Title>
-          <Body dangerouslySetInnerHTML={{__html: aboutBody.node.childMarkdownRemark.html}} />
+          <Body
+            dangerouslySetInnerHTML={{
+              __html: aboutBody.node.childMarkdownRemark.html,
+            }}
+          />
         </Wrapper>
       </Layout>
     )

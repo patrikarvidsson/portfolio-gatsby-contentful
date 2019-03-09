@@ -1,11 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
 import styled from '@emotion/styled'
-import { css } from 'emotion'
 import SEO from '../components/seo'
 
 const Article = styled.article`
@@ -39,7 +37,12 @@ class PortfolioEntryTemplate extends React.Component {
 
     return (
       <Layout>
-        <SEO title={entry.title} description={entry.description} image={entry.heroImage.fluid} pathname={this.props.location.pathname} />
+        <SEO
+          title={entry.title}
+          description={entry.description}
+          image={entry.heroImage.fluid}
+          pathname={this.props.location.pathname}
+        />
         <Article id="main">
           <Header>
             <Tags>
@@ -48,12 +51,18 @@ class PortfolioEntryTemplate extends React.Component {
                   {tag}
                 </span>
               ))}
-              {entry.concept === true && <Concept>&nbsp;·&nbsp;Concept</Concept>}
+              {entry.concept === true && (
+                <Concept>&nbsp;·&nbsp;Concept</Concept>
+              )}
             </Tags>
             <Title>{entry.clientName}</Title>
             <PublishDate>{entry.publishDate}</PublishDate>
           </Header>
-          <Image alt={entry.title} title={entry.title} fluid={entry.heroImage.fluid} />
+          <Image
+            alt={entry.title}
+            title={entry.title}
+            fluid={entry.heroImage.fluid}
+          />
           <Content
             dangerouslySetInnerHTML={{
               __html: entry.body.childMarkdownRemark.html,
@@ -83,7 +92,7 @@ export const pageQuery = graphql`
       tags
       heroImage {
         fluid(maxWidth: 1600, resizingBehavior: SCALE) {
-         ...GatsbyContentfulFluid_tracedSVG
+          ...GatsbyContentfulFluid_tracedSVG
         }
       }
       description
