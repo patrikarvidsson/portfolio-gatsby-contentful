@@ -15,7 +15,7 @@
  * https://github.com/gatsbyjs/gatsby/issues/9826
  */
 
-import './src/components/layout.css'
+import './src/sass/fonts.sass'
 
 export const onClientEntry = async () => {
   if (typeof IntersectionObserver === `undefined`) {

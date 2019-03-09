@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import styled from 'react-emotion'
+import { Helmet } from "react-helmet"
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'

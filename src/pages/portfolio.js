@@ -1,12 +1,13 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styled from 'react-emotion'
 import get from 'lodash/get'
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 import { graphql } from 'gatsby'
-import SEO from '../components/seo'
 
+import SEO from '../components/seo'
 import Layout from '../components/layout'
-import SmallCase from '../components/small-case'
+import SmallCase from '../components/case-small'
 
 const Hero = styled.div`
   ${tw`w-full xl:w-3/4 mt-12 mb-10 md:my-24 flex items-center`};
@@ -57,7 +58,7 @@ export default PortfolioPage
 
 export const pageQuery = graphql`
   query PortfolioQuery {
-    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: DESC }, limit: 999) {
+    allContentfulPortfolioEntry(sort: { fields: [publishDate], order: [DESC] }, limit: 20) {
       edges {
         node {
           title
@@ -65,11 +66,6 @@ export const pageQuery = graphql`
           slug
           publishDate(formatString: "MMMM Do, YYYY")
           tags
-          heroImage {
-            fluid(maxWidth: 800, maxHeight: 560, resizingBehavior: FILL) {
-             ...GatsbyContentfulFluid_tracedSVG
-            }
-          }
         description
         }
       }

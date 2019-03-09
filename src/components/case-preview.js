@@ -1,7 +1,8 @@
 import React, { useRef } from 'react'
 import { Link } from 'gatsby'
 import Img from 'gatsby-image'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 import BlockRevealAnimation from 'react-block-reveal-animation';
 import { useInView } from 'react-intersection-observer'
 

@@ -4,7 +4,8 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 import Img from 'gatsby-image'
 import Layout from '../components/layout'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 import SEO from '../components/seo'
 
 const Article = styled.article`

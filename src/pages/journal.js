@@ -1,12 +1,12 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import styled from 'react-emotion'
+import styled from '@emotion/styled'
+import { css } from 'emotion'
 import get from 'lodash/get'
-import { graphql } from 'gatsby'
-import SEO from '../components/seo'
+import { graphql, Link } from 'gatsby'
 
+import SEO from '../components/seo'
 import Layout from '../components/layout'
-import SmallPost from '../components/preview-article'
+import SmallPost from '../components/article-preview'
 
 const Wrapper = styled.div`
   ${tw`w-full lg:w-3/4 xl:w-2/3 py-10 lg:py-20 mx-auto`};
@@ -53,7 +53,7 @@ export default JournalIndex
 
 export const pageQuery = graphql`
   query JournalQuery {
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }, limit: 6) {
+    allContentfulBlogPost(sort: { fields: [publishDate], order: [DESC] }, limit: 6) {
       edges {
         node {
           title

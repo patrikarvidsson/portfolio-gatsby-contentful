@@ -1,12 +1,13 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import get from 'lodash/get'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
+import styled from '@emotion/styled'
+import { css } from 'emotion'
+
 import Layout from '../components/layout'
-import styled from 'react-emotion'
 import SEO from '../components/seo'
 
-import PreviewCase from '../components/preview-case'
+import PreviewCase from '../components/case-preview'
 
 const Hero = styled.div`
   ${tw`w-full md:max-w-md xl:max-w-lg md:h-screen-60 flex items-center my-10 md:my-0`};
@@ -50,18 +51,7 @@ class IndexPage extends React.Component {
             />
           </div>
         </Hero>
-        {/*<Section id="latestArticles">
-          <SectionTitle>Latest journal articles</SectionTitle>
-          <Articles>
-            {posts.map(({ node }) => {
-              return (
-                <PreviewArticle article={node} key={node.slug} />
-              )
-            })}
-          </Articles>
-          </Section>*/}
         <Section id="latestWork">
-          {/*<SectionTitle>Recent cases</SectionTitle>*/}
           <Articles>
             {cases.map(({ node }) => {
               return (
