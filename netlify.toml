@@ -1,2 +1,6 @@
 [build]
   publish = "public/"
+
+[context.production]
+  publish = "public/"
+  environment = { NODE_VERSION = "11.10.1"}
