@@ -6,8 +6,9 @@ This project was based on [gatsby-tailwind-emotion-starter](https://github.com/m
 
 ## Build environment
 
-Build fails on Netlify with default node `8.15.1`, so make sure environment is
-the following. These are included in `netlify.toml`. 
+Build fails on Netlify with default node `8.15.1`, so make sure environment used
+is matching listed versions below. Node version is set in `netlify.toml` so
+deploying to Netlify should work itself out automatically. 
 
 - `node` version `11.10.1`
 - `yarn` version `1.13.0`
@@ -55,13 +56,13 @@ yarn prettier
 
 Build site
 ```sh
-gatsby develop
+gatsby build
 ```
 
 Your built site will be in `/public`. This folder can then be uploaded to a
 static host such as Netlify.
 
-## Deploying to Netlify
+### Deploying to Netlify
 
 `netlify.toml` handles all deployment, but you have to manually enter
 environmental variables at Netlify if you want to use continuous deployment from
