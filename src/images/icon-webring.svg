@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="238px" height="214px" viewBox="0 0 238 214" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="238" height="214"></rect>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Rectangle"></g>
+            <g id="icon-webring" mask="url(#mask-2)" stroke-linecap="square">
+                <g transform="translate(20.000000, 20.000000)" id="Group">
+                    <g transform="translate(92.000000, 134.320508) rotate(120.000000) translate(-92.000000, -134.320508) translate(12.000000, 74.320508)">
+                        <path d="M60,0 C26.862915,0 7.10542736e-15,26.862915 0,60 C0,93.137085 26.862915,120 60,120 L160,120" id="Path" stroke="#000000" stroke-width="28"></path>
+                    </g>
+                    <g transform="translate(92.000000, 99.679492) rotate(-120.000000) translate(-92.000000, -99.679492) translate(12.000000, 39.679492)">
+                        <path d="M60,0 C26.862915,0 7.10542736e-15,26.862915 0,60 C0,93.137085 26.862915,120 60,120 L160,120" id="Path" stroke="#000000" stroke-width="28"></path>
+                    </g>
+                    <g transform="translate(42.000000, 57.000000)">
+                        <path d="M60,0 C26.862915,0 7.10542736e-15,26.862915 0,60 C0,93.137085 26.862915,120 60,120 L160,120" id="Path" stroke="#000000" stroke-width="28"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

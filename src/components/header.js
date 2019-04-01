@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import styled from '@emotion/styled'
 import logo from '../images/logo-black.svg'
+import webring from '../images/icon-webring.svg'
 
 const Container = styled.header`
   ${tw``};
@@ -15,11 +16,17 @@ const LogoLink = styled(Link)`
 const LogoImage = styled.img`
   ${tw`h-16 w-16 m-0`};
 `
+const WebringLink = styled('a')`
+  ${tw`no-underline text-inherit shadow-none hover:bg-transparent`};
+`
+const Webring = styled.img`
+  ${tw`h-6 w-6 m-0 hover:bg-transparent shadow-none`};
+`
 const Nav = styled.nav`
   ${tw``};
 `
 const NavList = styled.ul`
-  ${tw`list-reset m-0 uppercase tracking-wide text-sm`};
+  ${tw`list-reset m-0 uppercase tracking-wide text-sm flex items-center`};
 `
 const NavItem = styled.li`
   ${tw`ml-4 md:ml-6 inline-block no-underline`};
@@ -45,6 +52,11 @@ const Header = ({ siteTitle }) => (
           </NavItem>
           <NavItem>
             <NavItemLink to="/about/">About</NavItemLink>
+          </NavItem>
+          <NavItem>
+            <WebringLink href="https://webring.xxiivv.com/#random" target='_blank'>
+              <Webring src={webring} alt="Webring" />
+            </WebringLink>
           </NavItem>
         </NavList>
       </Nav>
