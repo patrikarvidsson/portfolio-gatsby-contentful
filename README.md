@@ -4,7 +4,7 @@ This project was based on [gatsby-tailwind-emotion-starter](https://github.com/m
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bcafd0b8-adec-4262-9254-bf44652c74a5/deploy-status)](https://app.netlify.com/sites/portfolio-contentful/deploys)
 
-# A similar version exists with Gasby + Sanity
+# A similar version exists with Gatsby + Sanity
 
 I recently rebuilt this portfolio with Sanity instead of Contentful. It's not
 completely finished and so far I would argue this one is more "flashy", but it
