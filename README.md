@@ -35,11 +35,11 @@ npm install --global gatsby-cli
 
 Clone project
 ```sh
-git clone https://github.com/patrikarvidsson/portfolio-contentful
+git clone https://github.com/patrikarvidsson/portfolio-gatsby-contentful
 ```
 
 ```sh
-cd portfolio-contentful
+cd portfolio-gatsby-contentful
 ```
 
 Rename `.contentful.json.sample` to `.contentful.json` and update with
@@ -49,7 +49,7 @@ Make sure `graphql` queries matches your content model over at Contentful. This
 repo is using a slightly modified version of the Contentful demo that is shown
 when signing up.
 
-Install packages from `portfolio-contentful` directory.
+Install packages from `portfolio-gatsby-contentful` directory.
 ```sh
 yarn
 ```
