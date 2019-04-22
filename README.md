@@ -14,7 +14,7 @@ Sanity had some really nice things like hot-reload of content and
 GraphQL-support out of the box. It also felt like build times on Netlify was
 much quicker.
 
-If you're interested you can find the new repository at [portfolio-sanity](https://github.com/patrikarvidsson/portfolio-gatsby-sanity).
+If you're interested you can find the new repository at [portfolio-gatsby-sanity](https://github.com/patrikarvidsson/portfolio-gatsby-sanity).
 
 ## Build environment
 

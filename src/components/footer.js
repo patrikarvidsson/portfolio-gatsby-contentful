@@ -17,7 +17,7 @@ const Footer = () => (
     </Inner>
     <Inner>
       Open-sourced at{' '}
-      <a href="https://github.com/patrikarvidsson/portfolio-contentful">
+      <a href="https://github.com/patrikarvidsson/portfolio-gatsby-contentful">
         https://github.com/patrikarvidsson
       </a>
     </Inner>
