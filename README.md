@@ -2,7 +2,19 @@
 
 This project was based on [gatsby-tailwind-emotion-starter](https://github.com/muhajirframe/gatsby-tailwind-emotion-starter) 
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/6a92f50e-c237-4bf7-ad9d-a5ff0db0835d/deploy-status)](https://app.netlify.com/sites/patrik/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bcafd0b8-adec-4262-9254-bf44652c74a5/deploy-status)](https://app.netlify.com/sites/portfolio-contentful/deploys)
+
+# A similar version exists with Gasby + Sanity
+
+I recently rebuilt this portfolio with Sanity instead of Contentful. It's not
+completely finished and so far I would argue this one is more "flashy", but it
+will probably not be developed further.
+
+Sanity had some really nice things like hot-reload of content and
+GraphQL-support out of the box. It also felt like build times on Netlify was
+much quicker.
+
+If you're interested you can find the new repository at [portfolio-sanity](https://github.com/patrikarvidsson/portfolio-gatsby-sanity).
 
 ## Build environment
 
@@ -23,11 +35,11 @@ npm install --global gatsby-cli
 
 Clone project
 ```sh
-git clone https://github.com/patrikarvidsson/patrikarvidsson.com
+git clone https://github.com/patrikarvidsson/portfolio-contentful
 ```
 
 ```sh
-cd patrikarvidsson.com
+cd portfolio-contentful
 ```
 
 Rename `.contentful.json.sample` to `.contentful.json` and update with
@@ -37,7 +49,7 @@ Make sure `graphql` queries matches your content model over at Contentful. This
 repo is using a slightly modified version of the Contentful demo that is shown
 when signing up.
 
-Install packages from `patrikarvidsson.com` directory.
+Install packages from `portfolio-contentful` directory.
 ```sh
 yarn
 ```
@@ -82,8 +94,8 @@ netlify deploy -p
 
 ### Why should I use Tailwind CSS or Emotion JS?
 
-Simply because Tailwind CSS is awesome. If you used
-[Tachyons](https://tachyons.io/) before, you know how awesome utility first CSS
+TailwindCSS is really great. If you used
+[Tachyons](https://tachyons.io/) before, you know how amazing utility first CSS
 can be compared to CSS framework like [Bootstrap](http://getbootstrap.com/).
 
 If you haven't tried a utility first CSS before, I urge you to give it a try. Tailwind is
@@ -100,9 +112,7 @@ current page doesn't need.
 We use [Emotion](https://github.com/emotion-js/emotion) because it's equally awesome. CSS-in-JS allows you to only load
 the required styles for the particular page you're on, by defining this as
 CSS-in-JS. In return, each page CSS footprint is smaller than the magic purgeCSS
-can do.
-
-Mindblowing.
+can do on it's own.
 
 ### So how do I use it?
 
