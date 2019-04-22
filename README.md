@@ -7,8 +7,7 @@ This project was based on [gatsby-tailwind-emotion-starter](https://github.com/m
 # A similar version exists with Gatsby + Sanity
 
 I recently rebuilt this portfolio with Sanity instead of Contentful. It's not
-completely finished and so far I would argue this one is more "flashy", but it
-will probably not be developed further.
+completely finished yet, and so far I would argue this one is more "flashy".
 
 Sanity had some really nice things like hot-reload of content and
 GraphQL-support out of the box. It also felt like build times on Netlify was
