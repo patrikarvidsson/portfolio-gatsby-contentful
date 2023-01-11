@@ -30,7 +30,7 @@
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images-contentful": "^2.1.27",
     "gatsby-source-contentful": "^2.1.69",
-    "gatsby-transformer-remark": "^2.6.42",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.3.9",
     "intersection-observer": "^0.7.0",
     "node-sass": "^4.13.0",
